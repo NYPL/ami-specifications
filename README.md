@@ -27,6 +27,7 @@ This document outlines the technical specifications and requirements for digitiz
     - [Video group 2](#video-group-2)
     - [Video group 3](#video-group-3)
   - [Service Copy file specifications: video](#service-copy-file-specifications-video)
+    - [Optical Video Service Copies](#optical-video-service-copies)
     - [Standard Definition video](#SD-video)
     - [High Definition video](#HD-video)
 - [Section C: Metadata](#section-c-metadata)
@@ -307,6 +308,12 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 <a name="service-copy-file-specifications-video"></a>
 ### Service Copy file specifications: video
 **Note:** As of 2016, NYPL uses Amazon Web Services (AWS) to deliver service copy files to patrons. Files are delivered to AWS via the Amazon Elastic Transcoder, by which the files pass through an additional level of transcoding. These specifications account for these automated post-digitization processes.
+
+<a name="optical-video-service-copies"></a>
+#### Optical Video Service Copies
+* One service copy must be created for each main program within an optical video object. Note: "program" refers to what can be easily identified as a discrete full-length work; this differs from a Video Title Set, or Video_TS file, for which there can be multiple title sets for a full-lenth program depending on a program's length.
+  * Examples: For a DVD-R that contains three different television programs, one Preservation Master (ISO) and three Service Copies (MP4) would be generated; For a Blu-Ray disc of "Gone With The Wind" that contains bonus features, one Preservation Master (ISO) and one Service Copy (MP4 of only the feature film) would be generated.
+  * If the content structure of a disc is not easily discerable by the vendor, the vendor must contact NYPL for information about how best to proceed. 
 
 <a name="SD-video"></a>
 #### Standard Definition video
