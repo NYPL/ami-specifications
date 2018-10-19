@@ -142,8 +142,8 @@ This document outlines the technical specifications and requirements for digitiz
 * In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
     * Follow the same naming convention as the WAV file, but instead with a ".cue" extension.
     * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
-    * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
-      * Example: "myh_123456_v01_pm.cue"
+    * Be referenced in the JSON file under the technical.cueFilename filed, by its complete filename.
+      * Example: "myh_123456_v01f01_pm.cue"
 
 =======
 * In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
