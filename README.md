@@ -221,6 +221,9 @@ When balance and/or overall level are insufficient a peak level adjustment of ma
 ##### Closed captions
 If present on the source tape, closed captions must be captured.
 * For Preservation Masters, an .srt sidecar file must be created and accompany the Preservation Master file.
+* .srt sidecar filemames must match their accompanying Preservation Master filename. Example:
+  * scb_123456_v01_pm.mkv
+  * scb_123456_v01_pm.srt
 * For Service Copies, closed captioning must be embedded in CEA-608 format.
 
 <a name="video-group-1"></a>
