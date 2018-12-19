@@ -36,7 +36,7 @@ This document outlines the technical specifications and requirements for digitiz
     - [Metadata content](#metadata-content)
     - [JSON "Notes" Fields](#json-notes-fields)
     - [Metadata errors](#metadata-errors)
-    - [Audio channel / tack configurations and terminology matrix](#audio-channel--tack-configurations-and-terminology-matrix)
+    - [Audio channel / track configurations and terminology matrix](#audio-channel--tack-configurations-and-terminology-matrix)
 - [Section D: Digital Asset Structure](#section-d-digital-asset-structure)
   - [File name and file structure specifications](#file-name-and-file-structure-specifications)
     - [File names](#file-names)
