@@ -111,6 +111,7 @@ This document outlines the technical specifications and requirements for digitiz
 * Format: Broadcast Wave (BWF)
 * Audio data encoding: PCM
 * Sampling rate: 96,000 Hz
+* Bit depth: 24-bit
 * Number of audio channels: Same as source
 
 ##### Additional details
