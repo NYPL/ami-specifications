@@ -440,15 +440,13 @@ Please refer to the following usage guide for the various "notes" fields include
 
 <a name="file-names"></a>
 #### File names
-* NYPL will provide the Contractor with a filename root for each original item, consisting of a three-letter prefix, the primary ID, a volume number (and a face number for audio items), and a two-letter suffix indicating the role of the file.  These sections are each separated by an underscore. For example:
-  * (prefix)_(primary ID)_(item structure)_(file role).(ext)
-  * Video: myd_mgzic1234_v01_pm
-  * Audio: myh_lt10a2345_v01f01_pm
-* The Contractor is responsible for creating file names in order to represent additional face, region, stream, or part elements and file roles.
+* NYPL will provide the vendor with a filename “root” for each collection object, consisting of a three-letter prefix, the primary ID, a volume number (and a face number for audio items), and a two-letter suffix indicating the role of the file.  These sections are each separated by an underscore: (prefix)_(primary ID)_(item structure)_(file role)
+  * Video example: myd_123456_v01_pm
+  * Audio example : myh_987654_v01f01r01_pm
+* The vendor is responsible for completing the filename to accommodate multiple volumes, faces, regions, etc. where applicable, as defined by the filename components listed below.
 
 <a name="item-structure"></a>
 #### Item structure
-* A file name must use the following components to represent the portion of a physical media item represented by the file.
 * A file name must use the following components to represent the portion of a physical media item represented by the file (see “component” chart).
 * **Example:** The file representing the second take of the second part of the third stream of the second region of the second face of an item marked as volume 1 is named as myd_259382_v01f02r02s03p02t02_pm.wav.
 
