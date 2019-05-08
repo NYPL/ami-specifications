@@ -40,7 +40,7 @@ For each original recording, the following shall be produced:
 |Attribute | Specification: 35mm | Specification: 16mm | Specification: 8mm / Super 8mm / Double 8mm |
 |---| :---: | :---: | :---: |
 | Video bit depth |16 bit|10 bit | 10 bit|
-| Resolution | 4K optical side overscan | 2K optical sideoverscan | 2K optical sideoverscan |
+| Resolution | 4K optical side overscan | 2K optical side overscan | 2K optical side overscan |
 | Video codec | FFv1 version 3 from DPX |FFv1 version 3 from DPX | FFv1 version 3 from DPX |
 | File wrapper | Matroska (.mkv) from DPX | Matroska (.mkv) from DPX | Matroska (.mkv) from DPX |
 | Frame size | 4096 x 3112| 2048 x 1556 | 2048 x 1556|
