@@ -16,12 +16,13 @@
 * Any repair actions taken must not result in any significant loss of content or annotations beyond what is necessary to achieve capture. Annotations on leader that must be cut off to make a repair must be included in the JSON metadata. 
 * Chemical treatment for deshrinking or rehumidification of shrunken, brittle and/or curling film must be approved with NYPL prior to treatment.
 
-### Film rehousing
+### Film rehousing and leader
 * Cans and cores: NYPL anticipates that a majority of film objects will be rehoused to archival cores and containers prior to vendor work, but some objects may not be due to their condition. Only objects which have not been rehoused by NYPL may be rehoused.
   * If needed, non-archival containers, shipping reels, and cores must be replaced with archival containers, cores, and/or reels. must comply with the Photographic Activity Test (PAT, ISO18916) 
   *  must be approved by NYPL
 * Leader: Most film objects will have 20 feet of new leader pre-attached (10 feet at head, 10 feet at tail), labeled with NYPL unique identifiers. 
-  * If leader must be added to an object, label the head and tail leader with the objects NYPL unique identifier.
+  * If leader must be added to an object: add 10ft of white leader matching the object's material base to the head and tail, and label the head and tail leader with the object's NYPL unique identifier ("Primary" or "CMS" Id). 
+    - Convention: **CMS# 123456** [large space] **HEAD**
 
 ## Digitization: Film Groups 1 and 2: Motion Picture Film, Silent / Sound
 ### Deliverables
