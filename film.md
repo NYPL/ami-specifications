@@ -38,7 +38,7 @@ For each original recording, the following shall be produced:
 
 ### Preservation Master Specifications
 |Attribute | Specification: 35mm | Specification: 16mm | Specification: 8mm / Super 8mm / Double 8mm |
-|---| --- | --- | --- |
+|---| :---: | :---: | :---: |
 | Video bit depth |16 bit|10 bit | 10 bit|
 | Resolution | 4K optical side overscan | 2K optical sideoverscan | 2K optical sideoverscan |
 | Video codec | FFv1 version 3 from DPX |FFv1 version 3 from DPX | FFv1 version 3 from DPX |
@@ -59,7 +59,7 @@ For each original recording, the following shall be produced:
 
 ### Edit Master Specifications
 |Attribute | Specification: (all formats) 
-|---| --- |
+|---| :---: |
 | Video bit depth | 10 bit|
 | Resolution | 1920 x 1080 |
 | Video codec | ProResHQ	|
@@ -82,7 +82,7 @@ For each original recording, the following shall be produced:
 
 ### Service Copy Specifications
 |Attribute | Specification: (all formats) 
-|---| --- |
+|---| :---: |
 | Video bit depth | 8 bit|
 | Resolution | 720 x 486 |
 | Video codec | H264	|
@@ -113,7 +113,7 @@ For each original recording, the following shall be produced:
 
 ### Preservation master *and* Edit master specifications: Film group 3 (Audio film)
 |Attribute | Specification: (all formats) 
-|---| --- |
+|---| :---: |
 | Audio data encding* | Free Lossless Audio Encoding (FLAC)|
 | Wrapper | FLAC (.flac)	|
 | Audio bit depth* | 24 bit|
