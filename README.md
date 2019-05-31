@@ -152,7 +152,6 @@ This document outlines the technical specifications and requirements for digitiz
   * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
   * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
 
->>>>>>> origin/master
 ##### Additional details
 * If CD-ROMs or hybrid CDs (multimedia+audio) are discovered during the Contractor’s review of physical objects, the Contractor should contact NYPL to discuss adjustments to the migration strategy.
 * Edit Masters for all audio CDs should adhere to the specifications below, with content delivered as a single Broadcast Wave file that matches the bit depth and sampling rate of the original object.
@@ -201,7 +200,7 @@ When balance and/or overall level are insufficient a peak level adjustment of ma
 <a name="general-information-video"></a>
 ### General information: video
 * Specifications may be modified over time to reflect changes in best practices or NYPL’s digital infrastructure, or to reflect previously unspecified media or conditions.
-* Formats are broken into Groups which help define the file deliverables (mainly the preservation masters) See the full list.
+* Formats are broken into Groups which help define the file deliverables (mainly the preservation masters). See the full list.
 * For each original video recording, the following shall be produced:
   * one Preservation Master file
   * one Service Copy file
@@ -270,10 +269,10 @@ If present on the source tape, closed captions must be captured.
 
 ##### Additional Guidelines
 * Silent channels
-  * If a channel exists and is silent, the channel should be captured and a note should be included in the JSON file that the indicates that the tape and the channels delivered on PM file are silent. If a channel is non-existent, then it won't be captured. For example:
+  * If a channel exists and is silent, the channel should be captured and a note should be included in the JSON file that  indicates that the tape and the channels delivered on PM file are silent. If a channel is non-existent, then it won't be captured. For example:
   * If soundField="ch.1:mono, ch.2: none" rather than soundField= "mono", then the second channel exists, and source.audioRecording.numberOfAudioChannels = 2 (and the PM file delivered will contain 2 channels of audio, one of which is silent).
   * Two silent channels
-If detected as actual channels / i.e. recorded with "black" vs. not recorded), both channels should be captured and delivered with the PM, and a signalNote should be included that the tape is silent.
+If detected as actual channels (i.e. recorded with "black" vs. not recorded), both channels should be captured and delivered with the PM, and a signalNote should be included that the tape is silent.
 
 * Timecode
   * Timecode (LTC and VITC) should be captured in the configuration as recorded on the media.
@@ -282,7 +281,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 #### Video group 2
 ##### Format types:  DV (digital video) cassettes
 
-##### File specifications: 10-bit [deprecate in 2017]
+##### File specifications: 8-bit [deprecate in 2017]
 
 |Attribute | Specification |
 | --- | ----|
@@ -315,7 +314,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 
 <a name="optical-video-service-copies"></a>
 #### Optical Video Service Copies
-* One service copy must be created for each main program within an optical video object. Note: "program" refers to what can be easily identified as a discrete full-length work; this differs from a Video Title Set, or Video_TS file, for which there can be multiple title sets for a full-lenth program depending on a program's length.
+* One service copy must be created for each main program within an optical video object. Note: "program" refers to what can be easily identified as a discrete full-length work; this differs from a Video Title Set, or Video_TS file, for which there can be multiple title sets for a full-length program depending on a program's length.
   * Examples: For a DVD-R that contains three different television programs, one Preservation Master (ISO) and three Service Copies (MP4) would be generated; For a Blu-Ray disc of "Gone With The Wind" that contains bonus features, one Preservation Master (ISO) and one Service Copy (MP4 of only the feature film) would be generated.
   * If the content structure of a disc is not easily discerable by the vendor, the vendor must contact NYPL for information about how best to proceed. 
 
@@ -387,7 +386,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 * Metadata schema: the NYPL AMI metadata schema must be used.
   * The schema, validator, and samples can be found at:
 github.com/nypl/ami-metadata.
-** The schema evolves as issues arise. The Contractor should notify NYPL when issues are discovered in order implement updates in a timely manner; NYPL will discuss modifications with the Contractor prior to implementation.
+** The schema evolves as issues arise. The Contractor should notify NYPL when issues are discovered in order to implement updates in a timely manner; NYPL will discuss modifications with the Contractor prior to implementation.
 * Metadata must be packaged as a single JSON file for each media file.
 * Metadata must validate against the digitized.json JSON Schema.
 * Metadata files must be named with the same root as the media file to which they pertain, but must not include the extension of the media file.
@@ -405,7 +404,7 @@ github.com/nypl/ami-metadata.
 
 * Metadata must use the only the fields and values defined in the NYPL Vendor Metadata Specification.
 * Additional metadata details:
-  * If there is a question about a field, or if the provided vocabulary does not accurately describe an object or process, or if a list of terms is insufficient contact NYPL for guidance on how to proceed. NYPL may approve and release new terms to the schema depending on priority.
+  * If there is a question about a field, or if the provided vocabulary does not accurately describe an object or process, or if a list of terms is insufficient, contact NYPL for guidance on how to proceed. NYPL may approve and release new terms to the schema depending on priority.
   * Fields listed as "Required" for a given format category must be given a value.
 * If that information is not known, the value must be “unknown”.
   * Fields listed as “Optional”, may contain a value. If there is no value, they must not be included in the metadata file. (Do not include empty optional fields.)
