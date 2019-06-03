@@ -10,7 +10,7 @@ This document outlines the technical specifications and requirements for digitiz
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
   - [FILM MEDIA](#film-media)
     - [Preservation Master file specifications: Film groups 1 and 2](#preservation-master-file-specifications-film-groups-1-and-2)
-    - [Specific NYPL Requirements](#specific-nypl-requirements)
+    - [Mezzanine file specifications: Film groups 1 and 2](#mezzanine-file-specifications-film-groups-1-and-2)
     - [Signal extraction](#signal-extraction)
     - [Audio group 1: analog audio](#audio-group-1-analog-audio)
     - [Audio group 2: digital audio](#audio-group-2-digital-audio)
@@ -73,7 +73,7 @@ For each original recording, the following shall be produced:
 Film must be digitized and captured as DPX, then transcoded with any synchronous Broadcast Wave files to FFV1/FLAC/Matroska using RAWcooked (https://mediaarea.net/RAWcooked).
 
 <a name="preservation-master-file-specifications-film-groups-1-and-2"></a>
-**_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
+#### **_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | ---- | ---- | ---- | ---- |
@@ -93,7 +93,8 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Transfer characteristics | Printing Density | Printing Density | Printing Density |
 | Notes | Transcoded to FFV1/MKV from DPX using RAWCooked | Transcoded to FFV1/MKV from DPX using RAWCooked | Transcoded to FFV1/MKV from DPX using RAWCooked |
 
-#### _Mezzanine file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_
+<a name="mezzanine-file-specifications-film-groups-1-and-2"></a>
+#### **_Mezzanine file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
