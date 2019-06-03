@@ -9,11 +9,16 @@ This document outlines the technical specifications and requirements for digitiz
 
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
   - [Film Media](#film-media)
-    - [Film groups 1 & 2](#film-groups-1-2)
-    - [Film group 3](#film-group-3)
-    - [Film groups 4](#film-group-4)
+    - [Film groups 1 & 2: Motion picture film](#film-groups-1-2)
+    - [Film group 3: Audiofilm](#film-group-3)
+    - [Film group 4: Filmstrip](#film-group-4)
   - [Video Media](#video-media)
+    - [Video group 1: Analog and digital cassette, analog reel](#video-group-1)
+    - [Video group 2: DV cassette](#video-group-2)
+    - [Video group 3: Optical video disc](#video-group-3)
   - [Audio Media](#audio-media)
+    - [Audio group 1](#audio-group-1)
+    - [Audio group 2](#audio-group-2)
 
 <!-- /MarkdownTOC -->
 
