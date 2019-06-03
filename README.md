@@ -9,6 +9,9 @@ This document outlines the technical specifications and requirements for digitiz
 
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
   - [Film Media](#film-media)
+    - [Film groups 1 & 2](#film-groups-1-2)
+    - [Film group 3](#film-group-3)
+    - [Film groups 4](#film-group-4)
   - [Video Media](#video-media)
   - [Audio Media](#audio-media)
 
@@ -37,8 +40,8 @@ For each original recording, the following shall be produced:
 
 Film must be digitized and captured as DPX, then transcoded with any synchronous Broadcast Wave files to FFV1/FLAC/Matroska using RAWcooked (https://mediaarea.net/RAWcooked).
 
+<a name="film-groups-1-2"></a>
 ### Film Groups 1 and 2: Motion picture film, silent / sound
-<a name="preservation-master-file-specifications-film-groups-1-and-2"></a>
 #### **_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
@@ -103,6 +106,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Audio channels | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
 | Image corrections| Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
+<a name="film-group-3"></a>
 ### Film Group 3: Audio film
 
 #### **_Preservation master file specifications: Film group 3 (Audio film)_**
@@ -129,6 +133,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Other characteristics | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes |
 | BEXT metadata | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables |
 
+<a name="film-group-4"></a>
 ### Film Group 4: Filmstrips
 NYPL will review recommendations for digitization of filmstrips (and accompanying audio media, where applicable) before defining a specification. Requests for recommendations regarding these objects have been included in the Business Questions section.
 
