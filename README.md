@@ -135,8 +135,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Audio bit rate | 320 kbs | 320 kbs | 320 kbs |
 | Audio sampling rate | 48,000 Hz | 48,000 Hz | 48,000 Hz |
 | Audio channels | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
-| Image | Color corrected for dye fading | Color corrected for dye fading| Color corrected for dye fading |
-| corrections | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
+| Image corrections| Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
 ### Film Group 3: Audio film
 
