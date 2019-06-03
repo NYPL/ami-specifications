@@ -62,6 +62,7 @@ The following sections are broken into format groups to define the file delivera
 <a name="film-media"></a>
 ## Film Media
 **Deliverables**
+
 For each original recording, the following shall be produced:
 * One preservation master file*
 * One mezzanine file*
@@ -69,9 +70,11 @@ For each original recording, the following shall be produced:
 * One metadata file per media file
 **If the object has audio content (i.e. composite sound print), audio must be synchronized and embedded in all final deliverables.**
 
-*_Capture tools_*
+**_Capture tools_**
+
 Film must be digitized and captured as DPX, then transcoded with any synchronous Broadcast Wave files to FFV1/FLAC/Matroska using RAWcooked (https://mediaarea.net/RAWcooked).
 
+### Film Groups 1 and 2: Motion picture film, silent / sound
 <a name="preservation-master-file-specifications-film-groups-1-and-2"></a>
 #### **_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
 
@@ -162,7 +165,6 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Number of audio channels | equal to preservation master | equal to preservation master | equal to preservation master|
 | Other characteristics | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes |
 | BEXT metadata | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables |
-
 
 ### Film Group 4: Filmstrips
 NYPL will review recommendations for digitization of filmstrips (and accompanying audio media, where applicable) before defining a specification. Requests for recommendations regarding these objects have been included in the Business Questions section.
