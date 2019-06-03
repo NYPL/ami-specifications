@@ -9,7 +9,7 @@ This document outlines the technical specifications and requirements for digitiz
 
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
   - [FILM MEDIA](#film-media)
-    - [Preservation Master file specifications: Groups 1 and 2](#preservation-master-file-specifications-film-groups-1-and-2)
+    - [Preservation Master file specifications: Film groups 1 and 2](#preservation-master-file-specifications-film-groups-1-and-2)
     - [Specific NYPL Requirements](#specific-nypl-requirements)
     - [Signal extraction](#signal-extraction)
     - [Audio group 1: analog audio](#audio-group-1-analog-audio)
@@ -72,6 +72,7 @@ For each original recording, the following shall be produced:
 *_Capture tools_*
 Film must be digitized and captured as DPX, then transcoded with any synchronous Broadcast Wave files to FFV1/FLAC/Matroska using RAWcooked (https://mediaarea.net/RAWcooked).
 
+<a name="preservation-master-file-specifications-film-groups-1-and-2"></a>
 **_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
