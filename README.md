@@ -114,10 +114,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Audio sampling* rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
 | Audio channels* | same as Preservation Master* | same as Preservation Master* | same as Preservation Master* |
 | Color space | 4:2:2 | 4:2:2 | 4:2:2 |
-| Image corrections | Color corrected for dye fading,
-Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading,
-Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading,
-Cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
+| Image corrections | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
 #### _Service copy file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_
 
