@@ -2,8 +2,8 @@
 
 This document outlines the technical specifications and requirements for digitization of analog media collections and digital packaging of deliverable files. For corresponding information about metadata; shipping, handling and reporting; and project administration, please see:
 
-![ami-handling](https://github.com/NYPL/ami-handling)
-![ami-metadata](https://github.com/NYPL/ami-metadata)
+* [ami-handling](https://github.com/NYPL/ami-handling)
+* [ami-metadata](https://github.com/NYPL/ami-metadata)
 
 ## Table Of Contents
 <!-- MarkdownTOC -->
