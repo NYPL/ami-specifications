@@ -8,28 +8,10 @@ This document outlines the technical specifications and requirements for digitiz
 <!-- MarkdownTOC -->
 
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
-  - [FILM MEDIA](#film-media)
-    - [Preservation Master file specifications: Film groups 1 and 2](#preservation-master-file-specifications-film-groups-1-and-2)
-    - [Mezzanine file specifications: Film groups 1 and 2](#mezzanine-file-specifications-film-groups-1-and-2)
-    - [Signal extraction](#signal-extraction)
-    - [Audio group 1: analog audio](#audio-group-1-analog-audio)
-    - [Audio group 2: digital audio](#audio-group-2-digital-audio)
-    - [Audio group 3: optical](#audio-group-3-optical)
-  - [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
-    - [Edit Master Alterations](#edit-master-alterations)
-    - [All audio groups](#all-audio-groups)
-- [Section B: Video](#section-b-video)
-  - [General information: video](#general-information-video)
-  - [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
-    - [General guidelines](#general-guidelines)
-    - [Video group 1](#video-group-1)
-    - [Video group 2](#video-group-2)
-    - [Video group 3](#video-group-3)
-  - [Service Copy file specifications: video](#service-copy-file-specifications-video)
-    - [Optical Video Service Copies](#optical-video-service-copies)
-    - [Standard Definition video](#SD-video)
-    - [High Definition video](#HD-video)
-- [Section C: Metadata](#section-c-metadata)
+  - [Film Media](#film-media)
+  - [Video Media](#video-media)
+  - [Audio Media](#audio-media)
+- [Metadata](#metadata)
   - [Metadata specifications](#metadata-specifications)
     - [Metadata file specifications](#metadata-file-specifications)
     - [Metadata content](#metadata-content)
@@ -119,7 +101,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Color space | 4:2:2 | 4:2:2 | 4:2:2 |
 | Image corrections | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
-#### _Service copy file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_
+#### **_Service copy file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
@@ -142,7 +124,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 
 ### Film Group 3: Audio film
 
-#### _Preservation master file specifications: Film group 3 (Audio film)_
+#### **_Preservation master file specifications: Film group 3 (Audio film)_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
@@ -154,7 +136,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Other characteristics | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. |
 | BEXT metadata | If possible, BEXT metadata must be embedded as per specifications for audio deliverables | If possible, BEXT metadata must be embedded as per specifications for audio deliverables | If possible, BEXT metadata must be embedded as per specifications for audio deliverables |
 
-#### _Edit master file specifications: Film group 3 (Audio film)_
+#### **_Edit master file specifications: Film group 3 (Audio film)_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
@@ -169,186 +151,128 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 ### Film Group 4: Filmstrips
 NYPL will review recommendations for digitization of filmstrips (and accompanying audio media, where applicable) before defining a specification. Requests for recommendations regarding these objects have been included in the Business Questions section.
 
-<a name="section-b-video"></a>
-## Section B: Video
+<a name="video-media"></a>
+## Video media
+### VIDEO MEDIA
 
-<a name="general-information-video"></a>
-### General information: video
-* Specifications may be modified over time to reflect changes in best practices or NYPL’s digital infrastructure, or to reflect previously unspecified media or conditions.
-* Formats are broken into Groups which help define the file deliverables (mainly the preservation masters). See the full list.
-* For each original video recording, the following shall be produced:
-  * one Preservation Master file
-  * one Service Copy file
-  * one QCTools report accompanying Preservation Master file
+#### _Deliverables_
+For each original recording, the following shall be produced:
+  * One preservation master file
+      * If captions are present in source, one closed captions sidecar file
+  * One service copy file
+  * One metadata file per media file
+  * Image files as described
 
-<a name="preservation-master-file-specifications-video"></a>
-### Preservation Master file specifications: video
-<a name="general-guidelines"></a>
-#### General guidelines
-* Characteristics intrinsic to the broadcast standard of the source material, including frame rate, pixel aspect ratio, interlacing, resolution, and recording standard (NTSC, PAL, SECAM, etc.) should be preserved.
+#### _Capture tools_
+Preservation master video files must be generated by professional-grade capture devices and software, with either direct capture to FFV1/FLAC/MKV, or transcoding from V210/PCM/MOV. Specific FFmpeg transcoding recipes will be provided by NYPL to ensure consistency.
 
-* Signal extraction must be optimal, and carried out using the equipment and accessories that are appropriate for the original format characteristics.
-* Luma, chroma and black levels may be adjusted as required on playback equipment or time base corrector to best represent source material.
-* Where applicable, luma should be adjusted to fall within broadcast range (100 IRE max) and must be no higher than 110 IRE.
-* The transfer should capture all content recorded on the original item, including any bars and tone, slates, or other material coming before the start of the recorded program.
-* The recording should run until the end of the recorded content (picture and sound).  If this endpoint cannot be unambiguously determined, the recording should run until the end of the original object.
+### Preservation master files, all groups
+  * Characteristics intrinsic to the broadcast standard of the source material, including frame rate, pixel aspect ratio, interlacing, resolution, and recording standard (NTSC, PAL, SECAM, etc.) should be preserved.
+  * Signal extraction must be optimal, and carried out using the equipment and accessories that are appropriate for the original format characteristics.
+  * The most direct and clean signal path must be used at all times from source to destination. There may be no devices inserted in the signal path that are not being used. If there are multiple destination formats being used in the transfer the signal path must be routed in parallel. No daisy-chaining of devices may occur.
+  * The highest quality signal format (composite, S-Video, Component, SDI, etc.) available for the source media type must be used throughout the entirety of the signal path from source through destination. Exceptions to this must be explained and requested prior to performing the transfer.
+  * Luminance, black, and color levels should be adjusted to existing color bars if they are present on tape and look accurate. If color bars are not present or are clearly inaccurate, preview each tape in order to adjust levels according to the content of the tape using known references (such as blue sky, known blacks and whites, flesh tone, etc.). Luma should be adjusted to fall within broadcast range (100 IRE max) and must not exceed 110 IRE.
+  * The transfer should capture all content recorded on the original object, including any bars and tone, slates, or other material coming before the start of the recorded program.
+  * The recording should run until the end of the recorded content (picture and sound).  If this endpoint cannot be unambiguously determined, the recording should run until the end of the original object.
+  * If present on the source tape, closed captions must be captured.
 
-##### Closed captions
-If present on the source tape, closed captions must be captured.
-* For Preservation Masters, an .srt sidecar file must be created and accompany the Preservation Master file.
-* .srt sidecar filemames must match their accompanying Preservation Master filename. Example:
-  * scb_123456_v01_pm.mkv
-  * scb_123456_v01_pm.srt
-* For Service Copies, closed captioning must be embedded in CEA-608 format.
+### Video preservation master sidecar files
+#### Closed captions
+  * If captions are present in source object, an .scc sidecar file must be created and accompany the preservation master file (closed captioning must be embedded in service copies. See service copy specifications).
+      * Format: Scenarist Closed Caption File (.scc)
+      * Naming Convention: division_PrimaryID_v01_pm.scc
+  * Closed captions specifications may change in the future to accommodate updates to standards or NYPL infrastructure needs.
 
-<a name="video-group-1"></a>
-#### Video group 1
-##### Format types: analog and digital cassettes, analog open reel
-##### File specifications: 10-bit [deprecate in 2017]
+### QCTools Reports
+  * Each video preservation master file should receive a corresponding QCTools report, which will be included in the PreservationMasters Bagged directory as a sidecar file.
+      * Format: QCTools Report (gzipped XML) (https://www.bavc.org/preserve-media/preservation-tools)
+      * Naming Convention: division_PrimaryID_v01_pm.mkv.qctools.xml.gz
 
-|Attribute | Specification |
-| --- | ----|
-| Video codec |10-bit uncompressed YUV (v210)|
-| Data compression | none (1:1, uncompressed)|
-| Chroma subsampling | 4:2:2 YUV |
-| Bit depth | 10-bit |
-| File wrapper | QuickTime (.mov) |
-| Frame rate | (same as original media)|
-| Frame size | (same as original media) |
-| Broadcast standard | (same as original media) |
-| Pixel Aspect Ratio | D1 NTSC (.91) or PAL (1.09)|
-| Audio format | PCM |
-| Audio bit depth | 24-bit|
-| Audio sampling rate | 48 kHz|
-| Audio channels | (same as original media, see guidelines for silent channels)|
+**_Preservation master file specifications:_**
+**_video group 1: analog and digital cassettes, analog open reel_**
 
-##### File specifications: FFv1 [implement in 2017]
-
-|Attribute | Specification |
-| --- | ----|
-| Video codec |FFv1 version 3|
-| Data compression | Lossless, Intra-frame (GOP-1) only|
+| Attribute | Specification |
+| ---- | ------ |
+| Video codec | FFv1 version 3 |
+| Data compression | Lossless, Intra-frame (GOP-1) only |
 | Chroma subsampling | 4:2:2 YUV |
 | Bit depth | 10-bit |
 | File wrapper | Matroska (.mkv) |
-| Frame rate | (same as original media)|
-| Frame size | (same as original media) |
-| Broadcast standard | (same as original media) |
-| Pixel Aspect Ratio | D1 NTSC (.91) or PAL (1.09)|
+| Frame rate | (Same as original media) |
+| Frame size | (Same as original media) |
+| Broadcast standard | (Same as original media) |
+| Pixel aspect ratio | D1 NTSC (.91) or PAL (1.09) |
 | Slices | 24 |
 | Slicecrc | 1 |
-| Audio format | PCM |
-| Audio bit depth | 24-bit|
-| Audio sampling rate | 48 kHz|
-| Audio channels | (same as original media, see guidelines for silent channels)|
+| Audio format | FLAC |
+| Audio bit depth | 24-bit |
+| Audio sampling rate | 48 kHz |
+| Audio channels | (Same as original media, see guidelines for silent channels) |
 
-##### Additional Guidelines
-* Silent channels
-  * If a channel exists and is silent, the channel should be captured and a note should be included in the JSON file that  indicates that the tape and the channels delivered on PM file are silent. If a channel is non-existent, then it won't be captured. For example:
-  * If soundField="ch.1:mono, ch.2: none" rather than soundField= "mono", then the second channel exists, and source.audioRecording.numberOfAudioChannels = 2 (and the PM file delivered will contain 2 channels of audio, one of which is silent).
-  * Two silent channels
-If detected as actual channels (i.e. recorded with "black" vs. not recorded), both channels should be captured and delivered with the PM, and a signalNote should be included that the tape is silent.
+### Silent audio channels
+  * If a channel exists and is silent, the channel should be captured and a note should be included in the JSON file that the indicates that the tape and the channels delivered on preservation master file are silent. If a channel is non-existent, then it won't be captured. For example:
+  * If soundField="ch.1:mono, ch.2: none" rather than soundField= "mono", then the second channel exists, and source.audioRecording.numberOfAudioChannels = 2 (and the preservation master file delivered will contain 2 channels of audio, one of which is silent).
+  * Two silent channels If detected as actual channels / i.e. recorded with "black" vs. not recorded), both channels should be captured and delivered with the preservation master, and a signalNote should be included that the tape is silent.
 
-* Timecode
-  * Timecode (LTC and VITC) should be captured in the configuration as recorded on the media.
+### Timecode
+  * Two forms of legacy/source timecode should be retained: LTC Timecode, recorded on an audio channel, should be captured as an audio stream in the resulting preservation master file; VITC timecode, if present, should be captured through the use of appropriate playback devices and a carefully routed SDI signal chain.
 
-<a name="video-group-2"></a>
-#### Video group 2
-##### Format types:  DV (digital video) cassettes
+  **_Preservation master file specifications: video group 2: DV (digital video) cassettes_**
 
-##### File specifications: 8-bit [deprecate in 2017]
+  NYPL prefers native capture of DV content, with the understanding that errors and varying conditions may require alternative approaches to signal capture. Below are NYPL primary specifications, followed by specifications for cases where the native DV capture with .dv wrapper is problematic due to problems with a given object.
 
-|Attribute | Specification |
-| --- | ----|
-| Video codec |(same as source)|
-| File wrapper | QuickTime (.mov)|
-| Other characteristics | (same as source) |
+| Attribute | Specification | Notes |
+| ---- | ---- | ---- |
+| Video codec | (Same as source) | See note |
+| File wrapper | DV (.dv) | See note |
+| Other characteristics | (Same as source) | If it is necessary to capture DV or HDV tapes via SDI (i.e. as V210/MOV), due to problematic tapes, deliverables must be transcoded and rewrapped as “.mkv”. |
 
+**_Preservation master file specifications: video group 3: optical discs_**
 
-##### File specifications: FFv1 [implement in 2017]
+| Attribute | Specification |
+| ---- | ------ |
+| File system | ISO 9660 / UDF |
+| File wrapper | ISO (.iso) |
+| Other characteristics | (Same as source) |
 
-|Attribute | Specification |
-| --- | ----|
-| Video codec |(same as source)|
-| File wrapper | Matroska (.mkv)|
-| Other characteristics | (same as source) |
+**_Service copy file specifications: all video groups_**
 
-##### Examples
-* DV/MiniDV objects should be captured with the DV codec
-* DVCPRO objects with the DVCPRO codec, etc.  
-
-<a name="video-group-3"></a>
-#### Video group 3
-##### Format types: optical discs
-##### File specifications
-* DVDs should be captured as ISO 9660/UDF disk image files to capture all data contained on the disc.
-
-<a name="service-copy-file-specifications-video"></a>
-### Service Copy file specifications: video
-**Note:** As of 2016, NYPL uses Amazon Web Services (AWS) to deliver service copy files to patrons. Files are delivered to AWS via the Amazon Elastic Transcoder, by which the files pass through an additional level of transcoding. These specifications account for these automated post-digitization processes.
-
-<a name="optical-video-service-copies"></a>
-#### Optical Video Service Copies
-* One service copy must be created for each main program within an optical video object. Note: "program" refers to what can be easily identified as a discrete full-length work; this differs from a Video Title Set, or Video_TS file, for which there can be multiple title sets for a full-length program depending on a program's length.
-  * Examples: For a DVD-R that contains three different television programs, one Preservation Master (ISO) and three Service Copies (MP4) would be generated; For a Blu-Ray disc of "Gone With The Wind" that contains bonus features, one Preservation Master (ISO) and one Service Copy (MP4 of only the feature film) would be generated.
-  * If the content structure of a disc is not easily discerable by the vendor, the vendor must contact NYPL for information about how best to proceed.
-
-<a name="SD-video"></a>
-#### Standard Definition video
-##### File specifications
-
-|Attribute | Specification |
-| --- | ----|
+| Attribute | Specification |
+| ---- | ------ |
 | Video codec | H.264/MPEG-4 AVC (ISO/IEC 14496-10 - MPEG4 Part 10, Advanced Video Coding) |
-| Video bit rate | 3.5 Mbps|
+| Video bit rate | 3.5 Mbit/second |
 | Chroma subsampling | 4:2:0 YUV |
 | Bit depth | 8-bit |
 | File wrapper | MP4 |
-| Frame rate | (same as Preservation Master)|
-| Frame size | (same as Preservation Master) |
-| Broadcast standard | (same as original media)|
-| Pixel Aspect Ratio | (same as Preservation Master, **see below for Anamorphic video**)|
-| Audio Codec | AAC |
-| Audio Bit Rate | 192 kbps|
-| Audio sampling rate | 48 kHz|
-| Audio channels | 2 (see examples)|
+| Frame rate | (Same as preservation master) |
+| Frame size | (Same as preservation master) |
+| Broadcast standard | (Same as original media) |
+| Pixel aspect ratio | (Same as preservation master, see below for Anamorphic video) |
+| Audio codec | AAC |
+| Audio bit rate | 320 kbps |
+| Audio sampling rate | 48 kHz |
+| Audio channels | 2 (see examples) |
+| Closed captions* | CEA-608  (*if applicable) |
 
-<a name="HD-video"></a>
-#### High Definition video
-##### File specifications
+#### _Anamorphic video_
+  * For service copies created from Anamorphic preservation masters, treat source as D1/DV NTSC or PAL Widescreen to produce a 16 x 9 service copy without padding. Pixel aspect ratio should be 1.21 (NTSC) / 1.46 (PAL).
 
-|Attribute | Specification |
-| --- | ----|
-| Video codec | H.264/MPEG-4 AVC (ISO/IEC 14496-10 - MPEG4 Part 10, Advanced Video Coding) |
-| Video bit rate | 8 Mbps|
-| Chroma subsampling | 4:2:0 YUV |
-| Bit depth | 8-bit |
-| File wrapper | MP4 |
-| Frame rate | (same as Preservation Master)|
-| Frame size | (same as Preservation Master) |
-| Broadcast standard | (same as original media)|
-| Pixel Aspect Ratio | (same as Preservation Master, **see below for Anamorphic video**)|
-| Audio Codec | AAC |
-| Audio Bit Rate | 192 kbps|
-| Audio sampling rate | 48 kHz|
-| Audio channels | 2 (see examples)|
+#### _Complex audio configurations_
+  * 4 audio channels on source:
+      * If a source tape has 4 audio channels of identical content (i.e. 4 mics in a single room recording the same content), the 4 channels captured in the preservation master should be mixed down to 2 for the service copy.
+      * If each audio channel contains different content, consult with NYPL for how to proceed.
+          * 2-channel Spanish / English language audio: If one channel contains Spanish dialogue and the other channel contains English dialogue, the audio content of the preservation master and the service copy must be identical.
+      * Audible content in only one channel:
+          * If there is only audible content in a single channel of any number of channels in a source tape and preservation master, the channel containing audible content should be mapped for production of a 2-channel service copy to provide a better user experience.
 
-##### Anamorphic video
-* For Service Copies created from Anamorphic Preservation Masters, treat source as D1/DV NTSC or PAL Widescreen to produce a 16 x 9 Service Copy without padding. Pixel Aspect Ratio should be 1.21 (NTSC) / 1.46 (PAL).
+#### _Timecode_
+  * Audible LTC Timecode should be eliminated, and “normal” content should be duplicated onto the second channel.
 
-##### Audio channels
-* 4 identical channels of audio on source:
-  * If a source tape has 4 channels of audio that are all the same (i.e. 4 mics in a single room recording the same content), the 4 channels captured in the PM should be mixed down to 2 for the Service Copy. If content is wildly different on each channel, the vendor should consult with NYPL for how to proceed.
-* Audible content in only one channel:
-  * If there is only audible content in a single channel of any number of channels in a source tape & Preservation Master, the channel containing audible content should be mapped for production of a 2-channel Service Copy to provide a better user experience.
-
-##### Timecode
-* LTC Timecode should be eliminated; audible “normal” content should be duplicated onto the second channel.
-##### Trimming of heads and tails
-* Color bars must not be trimmed.
-* Long tails of black / unrecorded content may be trimmed after confirmation that there is no visible or audible recorded content.
-* Trimming should not result in an abrupt end of visible or audible content.
-
+#### _Trimming of Heads and Tails_
+  * Color bars must not be trimmed.
+  * Long tails of black / “snow” / unrecorded content may be trimmed after confirmation that there is no visible or audible recorded content.
+  * Trimming must not result in an abrupt end of visible or audible content.
+  
 <a name="section-c-metadata"></a>
 ## Section C: Metadata
 <a name="metadata-specifications"></a>
@@ -509,125 +433,7 @@ The following are several examples of directory structures as expected by NYPL.
 ## DRAFT text
 
 
-### VIDEO MEDIA
 
-#### _Deliverables_
-For each original recording, the following shall be produced:
-  * One preservation master file
-      * If captions are present in source, one closed captions sidecar file
-  * One service copy file
-  * One metadata file per media file
-  * Image files as described
-
-#### _Capture tools_
-Preservation master video files must be generated by professional-grade capture devices and software, with either direct capture to FFV1/FLAC/MKV, or transcoding from V210/PCM/MOV. Specific FFmpeg transcoding recipes will be provided by NYPL to ensure consistency.
-
-### Preservation master files, all groups
-  * Characteristics intrinsic to the broadcast standard of the source material, including frame rate, pixel aspect ratio, interlacing, resolution, and recording standard (NTSC, PAL, SECAM, etc.) should be preserved.
-  * Signal extraction must be optimal, and carried out using the equipment and accessories that are appropriate for the original format characteristics.
-  * The most direct and clean signal path must be used at all times from source to destination. There may be no devices inserted in the signal path that are not being used. If there are multiple destination formats being used in the transfer the signal path must be routed in parallel. No daisy-chaining of devices may occur.
-  * The highest quality signal format (composite, S-Video, Component, SDI, etc.) available for the source media type must be used throughout the entirety of the signal path from source through destination. Exceptions to this must be explained and requested prior to performing the transfer.
-  * Luminance, black, and color levels should be adjusted to existing color bars if they are present on tape and look accurate. If color bars are not present or are clearly inaccurate, preview each tape in order to adjust levels according to the content of the tape using known references (such as blue sky, known blacks and whites, flesh tone, etc.). Luma should be adjusted to fall within broadcast range (100 IRE max) and must not exceed 110 IRE.
-  * The transfer should capture all content recorded on the original object, including any bars and tone, slates, or other material coming before the start of the recorded program.
-  * The recording should run until the end of the recorded content (picture and sound).  If this endpoint cannot be unambiguously determined, the recording should run until the end of the original object.
-  * If present on the source tape, closed captions must be captured.
-
-### Video preservation master sidecar files
-#### Closed captions
-  * If captions are present in source object, an .scc sidecar file must be created and accompany the preservation master file (closed captioning must be embedded in service copies. See service copy specifications).
-      * Format: Scenarist Closed Caption File (.scc)
-      * Naming Convention: division_PrimaryID_v01_pm.scc
-  * Closed captions specifications may change in the future to accommodate updates to standards or NYPL infrastructure needs.
-
-### QCTools Reports
-  * Each video preservation master file should receive a corresponding QCTools report, which will be included in the PreservationMasters Bagged directory as a sidecar file.
-      * Format: QCTools Report (gzipped XML) (https://www.bavc.org/preserve-media/preservation-tools)
-      * Naming Convention: division_PrimaryID_v01_pm.mkv.qctools.xml.gz
-
-**_Preservation master file specifications:_**
-**_video group 1: analog and digital cassettes, analog open reel_**
-
-| Attribute | Specification |
-| ---- | ------ |
-| Video codec | FFv1 version 3 |
-| Data compression | Lossless, Intra-frame (GOP-1) only |
-| Chroma subsampling | 4:2:2 YUV |
-| Bit depth | 10-bit |
-| File wrapper | Matroska (.mkv) |
-| Frame rate | (Same as original media) |
-| Frame size | (Same as original media) |
-| Broadcast standard | (Same as original media) |
-| Pixel aspect ratio | D1 NTSC (.91) or PAL (1.09) |
-| Slices | 24 |
-| Slicecrc | 1 |
-| Audio format | FLAC |
-| Audio bit depth | 24-bit |
-| Audio sampling rate | 48 kHz |
-| Audio channels | (Same as original media, see guidelines for silent channels) |
-
-### Silent audio channels
-  * If a channel exists and is silent, the channel should be captured and a note should be included in the JSON file that the indicates that the tape and the channels delivered on preservation master file are silent. If a channel is non-existent, then it won't be captured. For example:
-  * If soundField="ch.1:mono, ch.2: none" rather than soundField= "mono", then the second channel exists, and source.audioRecording.numberOfAudioChannels = 2 (and the preservation master file delivered will contain 2 channels of audio, one of which is silent).
-  * Two silent channels If detected as actual channels / i.e. recorded with "black" vs. not recorded), both channels should be captured and delivered with the preservation master, and a signalNote should be included that the tape is silent.
-
-### Timecode
-  * Two forms of legacy/source timecode should be retained: LTC Timecode, recorded on an audio channel, should be captured as an audio stream in the resulting preservation master file; VITC timecode, if present, should be captured through the use of appropriate playback devices and a carefully routed SDI signal chain.
-
-  **_Preservation master file specifications: video group 2: DV (digital video) cassettes_**
-
-  NYPL prefers native capture of DV content, with the understanding that errors and varying conditions may require alternative approaches to signal capture. Below are NYPL primary specifications, followed by specifications for cases where the native DV capture with .dv wrapper is problematic due to problems with a given object.
-
-| Attribute | Specification | Notes |
-| ---- | ---- | ---- |
-| Video codec | (Same as source) | See note |
-| File wrapper | DV (.dv) | See note |
-| Other characteristics | (Same as source) | If it is necessary to capture DV or HDV tapes via SDI (i.e. as V210/MOV), due to problematic tapes, deliverables must be transcoded and rewrapped as “.mkv”. |
-
-**_Preservation master file specifications: video group 3: optical discs_**
-
-| Attribute | Specification |
-| ---- | ------ |
-| File system | ISO 9660 / UDF |
-| File wrapper | ISO (.iso) |
-| Other characteristics | (Same as source) |
-
-**_Service copy file specifications: all video groups_**
-
-| Attribute | Specification |
-| ---- | ------ |
-| Video codec | H.264/MPEG-4 AVC (ISO/IEC 14496-10 - MPEG4 Part 10, Advanced Video Coding) |
-| Video bit rate | 3.5 Mbit/second |
-| Chroma subsampling | 4:2:0 YUV |
-| Bit depth | 8-bit |
-| File wrapper | MP4 |
-| Frame rate | (Same as preservation master) |
-| Frame size | (Same as preservation master) |
-| Broadcast standard | (Same as original media) |
-| Pixel aspect ratio | (Same as preservation master, see below for Anamorphic video) |
-| Audio codec | AAC |
-| Audio bit rate | 320 kbps |
-| Audio sampling rate | 48 kHz |
-| Audio channels | 2 (see examples) |
-| Closed captions* | CEA-608  (*if applicable) |
-
-#### _Anamorphic video_
-  * For service copies created from Anamorphic preservation masters, treat source as D1/DV NTSC or PAL Widescreen to produce a 16 x 9 service copy without padding. Pixel aspect ratio should be 1.21 (NTSC) / 1.46 (PAL).
-
-#### _Complex audio configurations_
-  * 4 audio channels on source:
-      * If a source tape has 4 audio channels of identical content (i.e. 4 mics in a single room recording the same content), the 4 channels captured in the preservation master should be mixed down to 2 for the service copy.
-      * If each audio channel contains different content, consult with NYPL for how to proceed.
-          * 2-channel Spanish / English language audio: If one channel contains Spanish dialogue and the other channel contains English dialogue, the audio content of the preservation master and the service copy must be identical.
-      * Audible content in only one channel:
-          * If there is only audible content in a single channel of any number of channels in a source tape and preservation master, the channel containing audible content should be mapped for production of a 2-channel service copy to provide a better user experience.
-
-#### _Timecode_
-  * Audible LTC Timecode should be eliminated, and “normal” content should be duplicated onto the second channel.
-
-#### _Trimming of Heads and Tails_
-  * Color bars must not be trimmed.
-  * Long tails of black / “snow” / unrecorded content may be trimmed after confirmation that there is no visible or audible recorded content.
-  * Trimming must not result in an abrupt end of visible or audible content.
 
 ### AUDIO MEDIA
 
