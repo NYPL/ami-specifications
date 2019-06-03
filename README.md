@@ -9,24 +9,24 @@ This document outlines the technical specifications and requirements for digitiz
 
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
   - [Film Media](#film-media)
-    - [Film groups 1 & 2: Motion picture film](#film-groups-1-2)
+    - [Film groups 1 & 2: motion picture film](#film-groups-1-2)
       - [Mezzanine files: film groups 1 & 2](#mezz-fg1-2)
       - [Service copies: film groups 1 & 2](#sc-fg1-2)
-    - [Film group 3: Audiofilm](#film-group-3)
+    - [Film group 3: audiofilm](#film-group-3)
       - [Edit masters: film group 3](#edit-masters-fg3)
-    - [Film group 4: Filmstrip](#film-group-4)
+    - [Film group 4: filmstrip](#film-group-4)
   - [Video Media](#video-media)
     - [Guidelines: video preservation master files](#guidelines-video-pm)
-    - [Video group 1: Analog and digital cassette, analog reel](#video-group-1)
+    - [Video group 1: analog and digital cassette, analog reel](#video-group-1)
     - [Video group 2: DV cassette](#video-group-2)
-    - [Video group 3: Optical video disc](#video-group-3)
+    - [Video group 3: video optical disc](#video-group-3)
     - [Service copies: all groups](#service-copies-all)
   - [Audio Media](#audio-media)
-    - [Audio group 1](#audio-group-1)
-    - [Audio group 2](#audio-group-2)
-    - [Audio group 2](#audio-group-3)
-    - [Audio group 2](#audio-group-4)
-    - [Audio group 2](#audio-group-5)
+    - [Audio group 1: analog magnetic](#audio-group-1)
+    - [Audio group 2: digital magnetic](#audio-group-2)
+    - [Audio group 3: audio optical disc](#audio-group-3)
+    - [Audio group 4: grooved disc](#audio-group-4)
+    - [Audio group 5: grooved cylinder](#audio-group-5)
     - [Edit masters: all groups](#edit-masters-all)
   - [Data Media](#data-media)
     - [Data group 1](#data-group-1)
@@ -373,16 +373,16 @@ BEXT metadata must be embedded in each audio file upon capturing to WAV. See Met
     * Follow the same naming convention as the WAV file, but instead with a ".cue" extension. Example: "myh_123456_v01f01_pm.cue"
     * Be referenced in the JSON file under the technical.cueFile field, by its complete filename
     * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file):
-        * PrimaryID
-            * data
-                * PreservationMasters
-                    * division_PrimaryID_v01f01.flac
-                    * division_PrimaryID_v01f01.cue
-                    * division_PrimaryID_v01f02.flac
-                    * division_PrimaryID_v01f02.cue
-                  * EditMasters
-                    * division_PrimaryID_v01f01.flac
-                    * division_PrimaryID_v01f02.flac
+      * PrimaryID
+        * data
+          * PreservationMasters
+            * division_PrimaryID_v01f01.flac
+            * division_PrimaryID_v01f01.cue
+            * division_PrimaryID_v01f02.flac
+            * division_PrimaryID_v01f02.cue
+          * EditMasters
+            * division_PrimaryID_v01f01.flac
+            * division_PrimaryID_v01f02.flac
 
 <a name="audio-group-4"></a>
 **_Preservation master file specifications: audio group 4: grooved disc_**
