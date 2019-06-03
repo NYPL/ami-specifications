@@ -7,10 +7,9 @@ This document outlines the technical specifications and requirements for digitiz
 ## Table Of Contents
 <!-- MarkdownTOC -->
 
-- [Section A: Audio](#section-a-audio)
-  - [General information: audio](#general-information-audio)
-  - [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
-    - [General audio guidelines](#general-audio-guidelines)
+- [Specifications for Digital Assets](#specifications-for-digital-assets)
+  - [FILM MEDIA](#film-media)
+    - [Preservation Master file specifications: Groups 1 and 2](#preservation-master-file-specifications-film-groups-1-and-2)
     - [Specific NYPL Requirements](#specific-nypl-requirements)
     - [Signal extraction](#signal-extraction)
     - [Audio group 1: analog audio](#audio-group-1-analog-audio)
@@ -53,146 +52,122 @@ This document outlines the technical specifications and requirements for digitiz
 <!-- /MarkdownTOC -->
 
 
+<a name="specifications-for-digital-assets"></a>
+# Specifications for Digital Assets
 
-<a name="section-a-audio"></a>
-## Section A: Audio
+Specifications may be modified over time to reflect changes in best practices or NYPL’s digital infrastructure, or to reflect previously unspecified media or conditions.
 
-<a name="general-information-audio"></a>
-### General information: audio
-* Specifications may be modified over time to reflect changes in best practices or NYPL’s digital infrastructure, or to reflect previously unspecified media or conditions.
-* Formats are broken into Groups which help define the file deliverables (mainly the preservation masters) See the full list.
-* For each original audio recording, the vendor shall produce:
-  * one (or more) preservation master file(s)
-  * one (or more) edit master file(s)
+The following sections are broken into format groups to define the file deliverables for different media types and format variations.
 
-<a name="preservation-master-file-specifications-audio"></a>
-### Preservation Master file specifications: audio
-<a name="general-audio-guidelines"></a>
-#### General audio guidelines
-* **Preservation Master:** The preservation master (PM) is the highest level derivative of the original recording, and is created in an effort to produce an authentic sonic facsimile of the original recording.  Therefore, the preservation master recording will represent an unedited, unaltered, direct, and complete capture of the signal from the output of the playback device.
+<a name="film-media"></a>
+## Film Media
+**Deliverables**
+For each original recording, the following shall be produced:
+* One preservation master file*
+* One mezzanine file*
+* One service copy file*
+* One metadata file per media file
+**If the object has audio content (i.e. composite sound print), audio must be synchronized and embedded in all final deliverables.**
 
-* **Technical guidelines - IASA-TC 04, 2nd edition:** The production of preservation master files will comply with the technical recommendations, practices and strategies outlined in the International Association of Audiovisual Archives’, Guidelines on the Production and Preservation of Digital Audio Objects, IASA-TC 04, 2nd edition.
+*_Capture tools_*
+Film must be digitized and captured as DPX, then transcoded with any synchronous Broadcast Wave files to FFV1/FLAC/Matroska using RAWcooked (https://mediaarea.net/RAWcooked).
 
-* **Strategic guidelines - IASA-TC 03, version 3:** The production of preservation master files will comply with the ethical recommendations, practices and strategies outlined in the International Association of Audiovisual Archives’, The Safeguarding of the Audio Heritage: Ethics, Principles and Preservation Strategy, IASA-TC 03, version 3.
+**_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
 
-* The Contractor shall notify NYPL whenever these guidelines cannot be met, and described the proposed process. Work cannot commence without NYPL approval of proposed processed.
+| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
+| ---- | ---- | ---- | ---- |
+| Video bit depth | 16 bit | 10 bit | 10 bit |
+| Resolution | 4K optical side overscan | 2K optical side overscan | 2K optical side overscan |
+| Video codec | FFv1 version 3 from DPX | FFv1 version 3 from DPX  | FFv1 version 3 from DPX |
+| File wrapper | Matroska (.mkv) from DPX | Matroska (.mkv) from DPX | Matroska (.mkv) from DPX |
+| Frame size | 4096x3112 | 2048x1556 | 2048x1556 |
+| Frame rate | (Same as source. If not described, please determine on viewing and describe in metadata signal) | (Same as source. If not described, please determine on viewing and describe in metadata signal) | (Same as source. If not described, please determine on viewing and describe in metadata signal) |
+| Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
+| Audio bit depth* | 24 bit | 24 bit | 24 bit |
+| Audio sampling rate* | 96,000 Hz | 96,000 Hz | 96,000 Hz |
+| Audio codec/data encoding* | FLAC from PCM/WAV | FLAC from PCM/WAV | FLAC from PCM/WAV |
+| Audio channels* | Same as source object | Same as source object | Same as source object |
+| Color space | Linear RGB | Linear RGB | Linear RGB |
+| Color primaries | BT.709 | BT.709 | BT.709 |
+| Transfer characteristics | Printing Density | Printing Density | Printing Density |
+| Notes | Transcoded to FFV1/MKV from DPX using RAWCooked | Transcoded to FFV1/MKV from DPX using RAWCooked | Transcoded to FFV1/MKV from DPX using RAWCooked |
 
-<a name="specific-nypl-requirements"></a>
-#### Specific NYPL Requirements
-##### Object-file relationships and special circumstances
-* **Faces:** In general, one preservation master file will be generated for each physically or technically discrete recording area of the original object.
-  * For example, each side of an audio cassette will be recorded as a separate preservation master file, identified with a designated Face number.
+#### _Mezzanine file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_
 
-* Considerations and circumstances that impact the number of preservation masters generated for each physical object, and/or for each discrete recording area:
-  * For an object which is found to have content recorded both forwards and backwards on the same Face, a second Face may be created for the reversed content to be recorded in the proper direction.
-  * **Region:** For an object with two regions recorded at different speeds, a separate PM must be created for each Region (filename_v01f01r01_pm).
-  * **Part:** When a recording must be divided into parts due to file size limitations (4GB WAV limit), a separate Preservation Master file must be created for each Part.
-  * There may be rare circumstances in which just the Edit Master from a PM will exceed the 4GB WAV limit (i.e. when mixing mono to stereo). In this case, the Edit Master must be split into multiple Parts, but the PM should not be split or captured as multiple parts - it must remain a single file. A note must be added to the metadata deliverables describing this circumstance.
-  * **File overlap:** If multiple PMs are created for a single recording due to either speed changes or size limitations (Regions or Parts), the cut should be made at a logical break in the audible content (if at all possible), and there must be exactly 5 seconds of audible content overlapping between the tail of the first PM and the head of the following PM so that the regions/parts may be recombined in the future if necessary.
+| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
+| --- | ---| --- | --- |
+| Bit depth | 10 bit | 10 bit | 10 bit |
+| Resolution | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
+| Display aspect ratio | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed |
+| Video codec | ProResHQ | ProResHQ | ProResHQ |
+| File wrapper | Quicktime | Quicktime | Quicktime |
+| Frame size | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
+| Frame rate | (Same as preservation master) | (Same as preservation master) | (Same as preservation master) |
+| Broadcast standard | NTSC | NTSC | NTSC |
+| Scan type | Progressive | Progressive | Progressive |
+| Pixel aspect ration | 1.000 | 1.000 | 1.000 |
+| Audio data encoding* | PCM | PCM | PCM |
+| Audio bit rate* | 2304 kbps | 2304 kbps | 2304 kbps |
+| Audio bit depth* | 24 bit | 24 bit | 24 bit |
+| Audio sampling* rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
+| Audio channels* | same as Preservation Master* | same as Preservation Master* | same as Preservation Master* |
+| Color space | 4:2:2 | 4:2:2 | 4:2:2 |
+| Image corrections | Color corrected for dye fading,
+Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading,
+Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading,
+Cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
-<a name="signal-extraction"></a>
-#### Signal extraction
-* IASA-TC 04: Signal extraction from analog original audio recordings will comply with the technical recommendations, practices and strategies outlined in the International Association of Audiovisual Archives’, Guidelines on the Production and Preservation of Digital Audio Objects, IASA-TC 04, 2nd edition, Chapter 5 (Signal Extraction from Original Carriers).
-* Optimal signal extraction for the production of Preservation Master files should aim to capture the complete dynamic and frequency ranges of the original recording.
-* Signal extraction must be carried out using the equipment and accessories that are appropriate and intended for the original format characteristics.
-  * Example: a full-track mono recording on an open reel audio tape must be transferred using a full-track audio head (rather than a stereo head).
-  * If this is not possible, the Contractor must provide an explicit proposal for work, subject to NYPL approval.
-* An optimal signal extraction from the original recording will be a flat (unmodified) transfer, free of signal processing, equalization, level adjustment, noise reduction, etc.  Exceptions would include:
-  * de-emphasis of a recording’s stated pre-emphasis (playback equalization)
-  * decoding of a recording’s stated noise-reduction encoding
-* Optimal signal extraction from original sources includes the extraction of the intended signal, along with any unintended signal (such as artifacts and anomalies in the signal associated with the inherent limitations of historic recording technologies).
-* Preservation master files may be one or two-channel (interleaved), and the configuration employed will be determined by the needs of the original recording.
-* Levels may be adjusted ONLY if there is severe distortion or digital clipping from the source, and this adjustment must be noted clearly in the metadata.
+#### _Service copy file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_
 
-<a name="audio-group-1-analog-audio"></a>
-#### Audio group 1: analog audio
-##### Format types: analog open reel, analog cassette, wire
-##### File specifications
-* Format: Broadcast Wave (BWF)
-* Audio data encoding: PCM
-* Sampling rate: 96,000 Hz
-* Bit depth: 24-bit
-* Number of audio channels: Same as source
+| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
+| --- | ---| --- | --- |
+| Bit depth | 8 bit | 8 bit | 8 bit |
+| Resolution | 720 x 486 | 720 x 486 | 720 x 486 |
+| Display aspect ratio | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
+| Video codec | H264 | H264 | H264 |
+| File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
+| Color space | 4:2:2 | 4:2:2 | 4:2:2 |
+| Frame size | 720 x 486 | 720 x 486 | 720 x 486 |
+| Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
+| Broadcast standard | NTSC | NTSC | NTSC |
+| Scan type | Progressive | Progressive | Progressive |
+| Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
+| Audio codec | AAC | AAC | AAC |
+| Audio bit rate | 320 kbs | 320 kbs | 320 kbs |
+| Audio sampling rate | 48,000 Hz | 48,000 Hz | 48,000 Hz |
+| Audio channels | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
+| Image | Color corrected for dye fading | Color corrected for dye fading| Color corrected for dye fading |
+| corrections | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
-##### Additional details
-* Optimal signal extraction from analog sources seeks to be complete, and includes the transfer of the “lead-in” and “play-out” portions of a recording.
-* Analog signals will be converted to a digital bitstream by means of an Analog-to-Digital converter which complies with the specifications in FADGI’s Audio Analog-to-Digital Converter Performance Specification and Test Method.
-* No signal processing will be applied to the Analog-to-Digital converter’s digital bitstream; this would include equalization, level adjustment, dither, noise reduction, etc.
+### Film Group 3: Audio film
 
-<a name="audio-group-2-digital-audio"></a>
-#### Audio group 2: digital audio
-##### Format types: digital audio tapes, etc.
-##### File specifications
-* Format: Broadcast Wave (BWF)
-* Audio data encoding: PCM
-* Bit depth: Same as source
-* Sampling rate: Same as source
-* Number of audio channels: Same as source
-##### Additional details
-* **Example:** a DAT recorded at 48/16 should be captured as a 48/16 Broadcast WAV file.
+#### _Preservation master file specifications: Film group 3 (Audio film)_
 
-<a name="audio-group-3-optical"></a>
-#### Audio group 3: optical audio
-##### Format types: optical discs
-##### File specifications: [deprecate in 2017]
-* CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
+| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
+| --- | ---| --- | --- |
+| Audio data encoding | Free Lossless Audio Encoding (FLAC) | Free Lossless Audio Encoding (FLAC) | Free Lossless Audio Encoding (FLAC) |
+| Wrapper | FLAC (.flac) | FLAC (.flac) | FLAC (.flac) |
+| Bit depth | 24 bit | 24 bit | 24 bit |
+| Sampling rate | 96,000 Hz | 96,000 Hz | 96,000 Hz |
+| Number of audio channels | (same as source) | (same as source) | (same as source) |
+| Other characteristics | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. |
+| BEXT metadata | If possible, BEXT metadata must be embedded as per specifications for audio deliverables | If possible, BEXT metadata must be embedded as per specifications for audio deliverables | If possible, BEXT metadata must be embedded as per specifications for audio deliverables |
 
-##### File specifications [implement 2017]
-* Format: WAV/CUE
-* CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
-* In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
-    * Follow the same naming convention as the WAV file, but instead with a ".cue" extension.
-    * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
-    * Be referenced in the JSON file under the technical.cueFilename filed, by its complete filename.
-      * Example: "myh_123456_v01f01_pm.cue"
+#### _Edit master file specifications: Film group 3 (Audio film)_
 
-=======
-* In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
-  * Follow the same naming convention as the WAV file, but instead with a ".cue" extension. Example: "myh_123456_v01_pm.cue"
-  * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
-  * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
+| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
+| --- | ---| --- | --- |
+| Audio data encoding | Flac | Flac | Flac |
+| Wrapper | Flac | Flac | Flac |
+| Bit depth | equal to preservation master | equal to preservation master | equal to preservation master |
+| Sampling rate | equal to preservation master | equal to preservation master | equal to preservation master |
+| Number of audio channels | equal to preservation master | equal to preservation master | equal to preservation master|
+| Other characteristics | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes |
+| BEXT metadata | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables |
 
-##### Additional details
-* If CD-ROMs or hybrid CDs (multimedia+audio) are discovered during the Contractor’s review of physical objects, the Contractor should contact NYPL to discuss adjustments to the migration strategy.
-* Edit Masters for all audio CDs should adhere to the specifications below, with content delivered as a single Broadcast Wave file that matches the bit depth and sampling rate of the original object.
 
-<a name="edit-master-file-specifications-audio"></a>
-### Edit Master file specifications: audio
-<a name="edit-master-alterations"></a>
-#### Edit Master Alterations
-The Edit Master serves as a production master – the recording from which all Service Copies for the Preservation Master will be derived.  It is a version of the Preservation Master which has been edited and/or processed to enhance the continuity and intelligibility of its content.
-
-The Edit Master will be altered from the Preservation Master in the following ways, as necessary:
-##### Head and tail edits (trimming)
-* Unrecorded portions of the Archive Original object which may have been captured in the production of the Preservation Master shall be eliminated.
-* Test tones and any equipment noise at the start and/or end of audible content (such as equipment on/off “clicks” or a stylus in the groove) should be trimmed.
-** Trimming should not result in an abrupt start and/or end of audible content.
-** When using automated processes or automation software for creation of Edit Masters, sample files must be approved by NYPL to determine acceptable results.
-* Elimination of the 5-second overlap included on any Preservation Masters that have been split out into multiple files for separate regions / streams / etc.
-##### Level Adjustment
-When balance and/or overall level are insufficient a peak level adjustment of max. -2db may be implemented as necessary.
-##### Channel adjustment
-* Ensuring that "mono" is true mono
-* Conversion of one-channel audio to two-channel audio (i.e. mono to dual-mono).
-
-<a name="all-audio-groups"></a>
-#### All audio groups
-##### Format types: All audio groups and format types follow the same specifications for edit masters.
-##### File specifications
-* Format: Broadcast Wave (BWF)
-* Audio data encoding: PCM
-* Bit depth:  equal to the Preservation Master
-* Sampling rate: equal to the Preservation Master
-* Number of audio channels: 2 (dual-mono or stereo)
-
-##### Preservation Master - Edit Master relationships and special circumstances
-* In general, one Edit Master will be created for each Preservation Master file.
-
-**Multi-track:**
-* Tapes with more than 2 streams of audio are considered multi-track. For multi-track recordings, Edit masters should not be created (except in the very rare occurrence that each track is being considered a separate Face, rather than a separate Stream - see Item Structure for more detail).
-
-**File size limitation:**
-* Some Edit Masters may be larger than their Preservation Masters. Due to the 4GB file size limit for WAV, the resulting change in file size may require creation of multiple Edit Masters for a single Preservation Master. See Specific NYPL Requirements for Preservation Masters above.
+### Film Group 4: Filmstrips
+NYPL will review recommendations for digitization of filmstrips (and accompanying audio media, where applicable) before defining a specification. Requests for recommendations regarding these objects have been included in the Business Questions section.
 
 <a name="section-b-video"></a>
 ## Section B: Video
@@ -532,123 +507,6 @@ The following are several examples of directory structures as expected by NYPL.
 
 --
 ## DRAFT text
-<a name="specifications-for-digital-assets"></a>
-## Specifications For Digital assets
-
-Specifications may be modified over time to reflect changes in best practices or NYPL’s digital infrastructure, or to reflect previously unspecified media or conditions.
-
-The following sections are broken into format groups to define the file deliverables for different media types and format variations.
-
-### FILM MEDIA
-#### Film Groups 1 and 2: Motion Picture Film, Silent / Sound
-#### _Deliverables_
-For each original recording, the following shall be produced:
-  * One preservation master file*
-  * One mezzanine file*
-  * One service copy file*
-  * One metadata file per media file
-
-If the object has audio content (i.e. composite sound print), audio must be synchronized and embedded in all final deliverables.
-
-#### _Capture tools_
-  * Film must be digitized and captured as DPX, then transcoded with any synchronous Broadcast Wave files to FFV1/FLAC/Matroska using RAWcooked (https://mediaarea.net/RAWcooked)
-
-**_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
-
-| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
-| ---- | ---- | ---- | ---- |
-| Video bit depth | 16 bit | 10 bit | 10 bit |
-| Resolution | 4K optical side overscan | 2K optical side overscan | 2K optical side overscan |
-| Video codec | FFv1 version 3 from DPX | FFv1 version 3 from DPX  | FFv1 version 3 from DPX |
-| File wrapper | Matroska (.mkv) from DPX | Matroska (.mkv) from DPX | Matroska (.mkv) from DPX |
-| Frame size | 4096x3112 | 2048x1556 | 2048x1556 |
-| Frame rate | (Same as source. If not described, please determine on viewing and describe in metadata signal) | (Same as source. If not described, please determine on viewing and describe in metadata signal) | (Same as source. If not described, please determine on viewing and describe in metadata signal) |
-| Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
-| Audio bit depth* | 24 bit | 24 bit | 24 bit |
-| Audio sampling rate* | 96,000 Hz | 96,000 Hz | 96,000 Hz |
-| Audio codec/data encoding* | FLAC from PCM/WAV | FLAC from PCM/WAV | FLAC from PCM/WAV |
-| Audio channels* | Same as source object | Same as source object | Same as source object |
-| Color space | Linear RGB | Linear RGB | Linear RGB |
-| Color primaries | BT.709 | BT.709 | BT.709 |
-| Transfer characteristics | Printing Density | Printing Density | Printing Density |
-| Notes | Transcoded to FFV1/MKV from DPX using RAWCooked | Transcoded to FFV1/MKV from DPX using RAWCooked | Transcoded to FFV1/MKV from DPX using RAWCooked |
-
-#### _Mezzanine file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_
-
-| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
-| --- | ---| --- | --- |
-| Bit depth | 10 bit | 10 bit | 10 bit |
-| Resolution | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
-| Display aspect ratio | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed |
-| Video codec | ProResHQ | ProResHQ | ProResHQ |
-| File wrapper | Quicktime | Quicktime | Quicktime |
-| Frame size | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
-| Frame rate | (Same as preservation master) | (Same as preservation master) | (Same as preservation master) |
-| Broadcast standard | NTSC | NTSC | NTSC |
-| Scan type | Progressive | Progressive | Progressive |
-| Pixel aspect ration | 1.000 | 1.000 | 1.000 |
-| Audio data encoding* | PCM | PCM | PCM |
-| Audio bit rate* | 2304 kbps | 2304 kbps | 2304 kbps |
-| Audio bit depth* | 24 bit | 24 bit | 24 bit |
-| Audio sampling* rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
-| Audio channels* | same as Preservation Master* | same as Preservation Master* | same as Preservation Master* |
-| Color space | 4:2:2 | 4:2:2 | 4:2:2 |
-| Image corrections | Color corrected for dye fading,
-Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading,
-Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading,
-Cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
-
-#### _Service copy file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_
-
-| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
-| --- | ---| --- | --- |
-| Bit depth | 8 bit | 8 bit | 8 bit |
-| Resolution | 720 x 486 | 720 x 486 | 720 x 486 |
-| Display aspect ratio | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
-| Video codec | H264 | H264 | H264 |
-| File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
-| Color space | 4:2:2 | 4:2:2 | 4:2:2 |
-| Frame size | 720 x 486 | 720 x 486 | 720 x 486 |
-| Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
-| Broadcast standard | NTSC | NTSC | NTSC |
-| Scan type | Progressive | Progressive | Progressive |
-| Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
-| Audio codec | AAC | AAC | AAC |
-| Audio bit rate | 320 kbs | 320 kbs | 320 kbs |
-| Audio sampling rate | 48,000 Hz | 48,000 Hz | 48,000 Hz |
-| Audio channels | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
-| Image | Color corrected for dye fading | Color corrected for dye fading| Color corrected for dye fading |
-| corrections | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
-
-### Film Group 3: Audio film
-
-#### _Preservation master file specifications: Film group 3 (Audio film)_
-
-| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
-| --- | ---| --- | --- |
-| Audio data encoding | Free Lossless Audio Encoding (FLAC) | Free Lossless Audio Encoding (FLAC) | Free Lossless Audio Encoding (FLAC) |
-| Wrapper | FLAC (.flac) | FLAC (.flac) | FLAC (.flac) |
-| Bit depth | 24 bit | 24 bit | 24 bit |
-| Sampling rate | 96,000 Hz | 96,000 Hz | 96,000 Hz |
-| Number of audio channels | (same as source) | (same as source) | (same as source) |
-| Other characteristics | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. | If there are tones / sync marks present, they must be captured or resolved and described in metadata signal notes. |
-| BEXT metadata | If possible, BEXT metadata must be embedded as per specifications for audio deliverables | If possible, BEXT metadata must be embedded as per specifications for audio deliverables | If possible, BEXT metadata must be embedded as per specifications for audio deliverables |
-
-#### _Edit master file specifications: Film group 3 (Audio film)_
-
-| Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
-| --- | ---| --- | --- |
-| Audio data encoding | Flac | Flac | Flac |
-| Wrapper | Flac | Flac | Flac |
-| Bit depth | equal to preservation master | equal to preservation master | equal to preservation master |
-| Sampling rate | equal to preservation master | equal to preservation master | equal to preservation master |
-| Number of audio channels | equal to preservation master | equal to preservation master | equal to preservation master|
-| Other characteristics | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes | If there are tones / sync marks present, they must be captured and described in metadata signal notes |
-| BEXT metadata | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables | BEXT metadata must be embedded as per specifications for audio deliverables |
-
-
-### Film Group 4: Filmstrips
-NYPL will review recommendations for digitization of filmstrips (and accompanying audio media, where applicable) before defining a specification. Requests for recommendations regarding these objects have been included in the Business Questions section.
 
 
 ### VIDEO MEDIA
