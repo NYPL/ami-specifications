@@ -14,7 +14,7 @@ This document outlines the technical specifications and requirements for digitiz
       - [Mezzanines: film groups 1 & 2](#mezz-fg1-2)
       - [Service copies: film groups 1 & 2](#sc-fg1-2)
     - [Film group 3: audiofilm](#film-group-3)
-      - [Preservation masters: film group 3] (#pm-fg3)
+      - [Preservation masters: film group 3](#pm-fg3)
       - [Edit masters: film group 3](#edit-masters-fg3)
     - [Film group 4: filmstrip](#film-group-4)
   - [Video Media](#video-media)
