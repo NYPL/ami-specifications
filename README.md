@@ -89,14 +89,14 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
 | Bit depth | 10 bit | 10 bit | 10 bit |
-| Resolution | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
-| Display aspect ratio | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed |
+| Resolution** | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
+| Display aspect ratio** | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed |
 | Video codec | ProResHQ | ProResHQ | ProResHQ |
 | File wrapper | Quicktime | Quicktime | Quicktime |
-| Frame size | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
+| Frame size** | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
 | Frame rate | (Same as preservation master) | (Same as preservation master) | (Same as preservation master) |
 | Scan type | Progressive | Progressive | Progressive |
-| Pixel aspect ration | 1.000 | 1.000 | 1.000 |
+| Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
 | Audio data encoding* | PCM | PCM | PCM |
 | Audio bit rate* | 2304 kbps | 2304 kbps | 2304 kbps |
 | Audio bit depth* | 24 bit | 24 bit | 24 bit |
@@ -105,26 +105,32 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Color space | 4:2:2 | 4:2:2 | 4:2:2 |
 | Image corrections | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
+* Where audio is applicable.
+** Subject to change. TBD.
+
 <a name="sc-fg1-2"></a>
 #### **_Service copy file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
 | Bit depth | 8 bit | 8 bit | 8 bit |
-| Resolution | 720 x 486 | 720 x 486 | 720 x 486 |
-| Display aspect ratio | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
+| Resolution** | 720 x 480 | 720 x 480 | 720 x 480 |
+| Display aspect ratio** | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
 | Video codec | H264 | H264 | H264 |
 | File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
 | Color space | 4:2:0 | 4:2:0 | 4:2:0 |
-| Frame size | 720 x 486 | 720 x 486 | 720 x 486 |
+| Frame size** | 720 x 486 | 720 x 486 | 720 x 486 |
 | Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
 | Scan type | Progressive | Progressive | Progressive |
 | Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
-| Audio codec | AAC | AAC | AAC |
-| Audio bit rate | 320 kbs | 320 kbs | 320 kbs |
-| Audio sampling rate | 48,000 Hz | 48,000 Hz | 48,000 Hz |
-| Audio channels | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
+| Audio codec* | AAC | AAC | AAC |
+| Audio bit rate* | 320 kbs | 320 kbs | 320 kbs |
+| Audio sampling rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
+| Audio channels* | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
 | Image corrections| Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
+
+* Where audio is applicable.
+** Subject to change. TBD.
 
 <a name="film-group-3"></a>
 ### Film Group 3: Audio film
