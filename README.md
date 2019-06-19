@@ -116,7 +116,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Display aspect ratio | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
 | Video codec | H264 | H264 | H264 |
 | File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
-| Color space | 4:2:2 | 4:2:2 | 4:2:2 |
+| Color space | 4:2:0 | 4:2:0 | 4:2:0 |
 | Frame size | 720 x 486 | 720 x 486 | 720 x 486 |
 | Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
 | Broadcast standard | NTSC | NTSC | NTSC |
