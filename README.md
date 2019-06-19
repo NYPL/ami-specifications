@@ -105,7 +105,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Color space | 4:2:2 | 4:2:2 | 4:2:2 |
 | Image corrections | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
-* Where audio is applicable.
+\* Where audio is applicable.
 ** Subject to change. TBD.
 
 <a name="sc-fg1-2"></a>
@@ -129,7 +129,7 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Audio channels* | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
 | Image corrections| Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
-* Where audio is applicable.
+\* Where audio is applicable.
 ** Subject to change. TBD.
 
 <a name="film-group-3"></a>
