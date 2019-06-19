@@ -95,7 +95,6 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | File wrapper | Quicktime | Quicktime | Quicktime |
 | Frame size | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
 | Frame rate | (Same as preservation master) | (Same as preservation master) | (Same as preservation master) |
-| Broadcast standard | NTSC | NTSC | NTSC |
 | Scan type | Progressive | Progressive | Progressive |
 | Pixel aspect ration | 1.000 | 1.000 | 1.000 |
 | Audio data encoding* | PCM | PCM | PCM |
@@ -119,7 +118,6 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Color space | 4:2:0 | 4:2:0 | 4:2:0 |
 | Frame size | 720 x 486 | 720 x 486 | 720 x 486 |
 | Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
-| Broadcast standard | NTSC | NTSC | NTSC |
 | Scan type | Progressive | Progressive | Progressive |
 | Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
 | Audio codec | AAC | AAC | AAC |
