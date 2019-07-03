@@ -10,24 +10,27 @@ This document outlines the technical specifications and requirements for digitiz
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
   - [Film Media](#film-media)
     - [Film groups 1 & 2: motion picture film](#film-groups-1-2)
-      - [Mezzanine files: film groups 1 & 2](#mezz-fg1-2)
+      - [Preservation masters: film groups 1 & 2](#pm-fg1-2)
+      - [Mezzanines: film groups 1 & 2](#mezz-fg1-2)
       - [Service copies: film groups 1 & 2](#sc-fg1-2)
     - [Film group 3: audiofilm](#film-group-3)
+      - [Preservation masters: film group 3](#pm-fg3)
       - [Edit masters: film group 3](#edit-masters-fg3)
     - [Film group 4: filmstrip](#film-group-4)
   - [Video Media](#video-media)
-    - [Guidelines: video preservation master files](#guidelines-video-pm)
-    - [Video group 1: analog and digital cassette, analog reel](#video-group-1)
-    - [Video group 2: DV cassette](#video-group-2)
-    - [Video group 3: video optical disc](#video-group-3)
-    - [Service copies: all groups](#service-copies-all)
+    - [Video preservation masters](#guidelines-video-pm)
+      - [Video group 1: analog and digital cassette, analog reel](#video-group-1)
+      - [Video group 2: DV cassette](#video-group-2)
+      - [Video group 3: video optical disc](#video-group-3)
+      - [Service copies: all groups](#service-copies-all)
   - [Audio Media](#audio-media)
-    - [Audio group 1: analog magnetic](#audio-group-1)
-    - [Audio group 2: digital magnetic](#audio-group-2)
-    - [Audio group 3: audio optical disc](#audio-group-3)
-    - [Audio group 4: grooved disc](#audio-group-4)
-    - [Audio group 5: grooved cylinder](#audio-group-5)
-    - [Edit masters: all groups](#edit-masters-all)
+    - [Audio preservation masters](#audio-pms)
+      - [Audio group 1: analog magnetic](#audio-group-1)
+      - [Audio group 2: digital magnetic](#audio-group-2)
+      - [Audio group 3: audio optical disc](#audio-group-3)
+      - [Audio group 4: grooved disc](#audio-group-4)
+      - [Audio group 5: grooved cylinder](#audio-group-5)
+      - [Audio edit masters: all groups](#edit-masters-all)
   - [Data Media](#data-media)
     - [Data group 1](#data-group-1)
 
@@ -58,6 +61,8 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 
 <a name="film-groups-1-2"></a>
 ### Film Groups 1 and 2: Motion picture film, silent / sound
+
+<a name="pm-fg1-2"></a>
 #### **_Preservation master file specifications: Film groups 1 & 2: Motion picture film, silent / sound_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
@@ -84,15 +89,14 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
 | Bit depth | 10 bit | 10 bit | 10 bit |
-| Resolution | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
-| Display aspect ratio | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed |
+| Resolution** | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
+| Display aspect ratio** | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed |
 | Video codec | ProResHQ | ProResHQ | ProResHQ |
 | File wrapper | Quicktime | Quicktime | Quicktime |
-| Frame size | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
+| Frame size** | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
 | Frame rate | (Same as preservation master) | (Same as preservation master) | (Same as preservation master) |
-| Broadcast standard | NTSC | NTSC | NTSC |
 | Scan type | Progressive | Progressive | Progressive |
-| Pixel aspect ration | 1.000 | 1.000 | 1.000 |
+| Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
 | Audio data encoding* | PCM | PCM | PCM |
 | Audio bit rate* | 2304 kbps | 2304 kbps | 2304 kbps |
 | Audio bit depth* | 24 bit | 24 bit | 24 bit |
@@ -101,31 +105,37 @@ Film must be digitized and captured as DPX, then transcoded with any synchronous
 | Color space | 4:2:2 | 4:2:2 | 4:2:2 |
 | Image corrections | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
+\* Where audio is applicable.
+** Subject to change. TBD.
+
 <a name="sc-fg1-2"></a>
 #### **_Service copy file specifications: Film group 1 & 2 (Motion picture film, silent / sound)_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
 | Bit depth | 8 bit | 8 bit | 8 bit |
-| Resolution | 720 x 486 | 720 x 486 | 720 x 486 |
-| Display aspect ratio | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
+| Resolution** | 720 x 480 | 720 x 480 | 720 x 480 |
+| Display aspect ratio** | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
 | Video codec | H264 | H264 | H264 |
 | File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
-| Color space | 4:2:2 | 4:2:2 | 4:2:2 |
-| Frame size | 720 x 486 | 720 x 486 | 720 x 486 |
+| Color space | 4:2:0 | 4:2:0 | 4:2:0 |
+| Frame size** | 720 x 486 | 720 x 486 | 720 x 486 |
 | Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
-| Broadcast standard | NTSC | NTSC | NTSC |
 | Scan type | Progressive | Progressive | Progressive |
 | Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
-| Audio codec | AAC | AAC | AAC |
-| Audio bit rate | 320 kbs | 320 kbs | 320 kbs |
-| Audio sampling rate | 48,000 Hz | 48,000 Hz | 48,000 Hz |
-| Audio channels | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
+| Audio codec* | AAC | AAC | AAC |
+| Audio bit rate* | 320 kbs | 320 kbs | 320 kbs |
+| Audio sampling rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
+| Audio channels* | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
 | Image corrections| Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
+
+\* Where audio is applicable.
+** Subject to change. TBD.
 
 <a name="film-group-3"></a>
 ### Film Group 3: Audio film
 
+<a name="pm-fg3"></a>
 #### **_Preservation master file specifications: Film group 3 (Audio film)_**
 
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
@@ -262,6 +272,10 @@ Preservation master video files must be generated by professional-grade capture 
 | Audio channels | 2 (see examples) |
 | Closed captions* | CEA-608  (*if applicable) |
 
+#### _Service copies, video group 3: optical video disc_
+  * An individual service copy must be created for all discreet content. Example:
+    * If a disc contains two discreet videos, each with different display aspect ratios (i.e. 16:9 vs. 4:3), a separate service copy must be made for each video.
+
 ### Additional video specifications
 #### _Anamorphic video_
   * For service copies created from Anamorphic preservation masters, treat source as D1/DV NTSC or PAL Widescreen to produce a 16 x 9 service copy without padding. Pixel aspect ratio should be 1.21 (NTSC) / 1.46 (PAL).
@@ -298,6 +312,7 @@ Preservation master and edit master files must be captured/encoded as Broadcast 
 
 Files that exceed the Broadcast Wave Format 4GB file size limitation should be captured as RF64, with the same embedded metadata values. Post-capture, all Broadcast Wave and RF64 files should be transcoded to the FLAC codec and container, with embedded metadata and original modification times retained through the use of the FLAC Utility (https://xiph.org/flac/download.html) by following the command listed on the FFmprovisr website (https://amiaopensource.github.io/ffmprovisr/#flac-tool). Original capture as Wave64 (.w64) is not acceptable.
 
+<a name="audio-pms"></a>
 #### Preservation master
   * Technical guidelines: The production of preservation master files will comply with the technical recommendations, practices and strategies outlined by the International Association of Audiovisual Archives
   * Strategic guidelines - IASA-TC 03, version 3: The production of preservation master files will comply with the ethical recommendations, practices and strategies outlined by the International Association of Audiovisual Archives.
