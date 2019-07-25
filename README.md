@@ -44,6 +44,58 @@ Specifications may be modified over time to reflect changes in best practices or
 
 The following sections are broken into format groups to define the file deliverables for different media types and format variations.
 
+## 
+Digital asset packaging
+Package digital assets using the BagIt specification (V0.97) (https://tools.ietf.org/html/rfc8493). 
+
+### Bag Requirements
+* The Bag payload must contain the digital assets organized within a directory structure described by NYPL.
+* The Bag directory must be named with the Primary ID of the collection object represented by the files in the bag.
+* The Bag must contain an md5 manifest that lists every file in the data directory and their md5 checksums.
+* The Bag must contain all of the media and metadata files from one, and only one, inventoried collection object.
+* The Bag should be created with a tool using BagIt Library 4.4 or higher.
+* The Bag may include a tagmanifest.txt file. Some bagging software produces this file automatically. It is not required to produce or * delete these files.
+* The Bag and the files within it must not be compressed with zip, tar, etc.
+#### Subdirectories
+* Sub-directories must be exactly named as they are written here, in plural form, regardless of the number of files within the directory.
+* Film Bags must contain the following subdirectories within the data directory:
+  * PreservationMasters
+  * Mezzanines
+  * ServiceCopies
+* Video Bags must contain the following subdirectories within the data directory:
+  * PreservationMasters
+  * ServiceCopies
+  * Images
+* Audio Bags must contain the following subdirectories within the data directory:
+  * PreservationMasters
+  * EditMasters
+  * Images
+* Data Bags must contain the following subdirectories within the data directory:
+  * PreservationMasters
+  * Images
+  * Files
+* For each preservation master file in the PreservationMasters directory, corresponding derivative file/s must exist.
+* Each audio, film, video media, or data file in the Bag must have a corresponding JSON metadata file (image files do not require metadata).
+
+
+### File naming convention
+
+NYPL will provide the vendor with a filename “root” for each collection object, consisting of a three-letter prefix, the primary ID, a volume number (and a face number for audio objects), and a two-letter suffix indicating the role of the file.  These sections are each separated by an underscore: (prefix)_(primary ID)_(components)_(file role).ext
+
+Video example: myd_123456_v01_pm.mkv
+Audio example : myh_987654_v01f01r01_pm.flac
+
+It is the vendor’s responsibility to complete  the filename to accommodate multiple volumes, faces, regions, etc. where applicable, as defined by the filename components listed below.
+
+### File role
+A media file name must record its intended role using one of the following suffix codes:
+pm: Preservation Master, created for every physical media object
+mz: Mezzanine, created for every motion picture film (film groups 1 and 2)
+em: Edit Master, created for audio files
+sc: Service Copy, created for video files
+image files do not require a role suffix
+
+
 <a name="film-media"></a>
 ## Film Media
 
