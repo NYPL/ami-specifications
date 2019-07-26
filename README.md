@@ -8,6 +8,8 @@ This document outlines the technical specifications and requirements for digitiz
 <!-- MarkdownTOC -->
 
 - [Specifications for Digital Assets](#specifications-for-digital-assets)
+  - [Digital Asset Packaging](#digital-asset-packaging)
+  - [Metadata](#metadata)
   - [Film Media](#film-media)
     - [Film groups 1 & 2: motion picture film](#film-groups-1-2)
       - [Preservation masters: film groups 1 & 2](#pm-fg1-2)
@@ -44,8 +46,8 @@ Specifications may be modified over time to reflect changes in best practices or
 
 The following sections are broken into format groups to define the file deliverables for different media types and format variations.
 
-## 
-Digital asset packaging
+<a name="digital-asset-packaging"></a>
+## Digital asset packaging
 Package digital assets using the BagIt specification (V0.97) (https://tools.ietf.org/html/rfc8493). 
 
 ### Bag Requirements
@@ -94,6 +96,62 @@ mz: Mezzanine, created for every motion picture film (film groups 1 and 2)
 em: Edit Master, created for audio files
 sc: Service Copy, created for video files
 image files do not require a role suffix
+
+<a name="metadata"></a>
+## Metadata 
+
+### NYPL Metadata inventory
+NYPL will provide the vendor with a Microsoft Excel spreadsheet containing identifying and descriptive information about each NYPL collection object included in the PO.  Note that one collection object with a single unique primary id may contain multiple physical objects (for example: a double compact cassette case). 
+
+### NYPL JSON schema
+NYPL metadata deliverables must adhere to customized fields and controlled vocabulary defined within NYPL’s JSON Schema. The schema, sample files, and validation instructions are hosted on GitHub: https://github.com/NYPL/ami-metadata. 
+Metadata must be packaged as a single JSON file for each audio, video, or film media file (Images do not require JSON metadata).
+Metadata must validate against JSON schema. Any invalid files or errors will be corrected by the vendor and require redelivery of an entire Bagged digital asset.
+* Metadata files must be named with the same root as the media file to which they pertain, but must not include the original extension of the media file. Example:
+  * Correct: [filename].json
+  * Incorrect: [filename].mov.json
+* The vendor will be responsible for the following:
+  * Maintaining a system that is able to easily sync with and incorporate updates from NYPL’s live GitHub repository, ami-metadata, and 
+  * Generating metadata about the source object, preservation master and derivative files, treatment and digitization processes, and the transfer operator. 
+
+### Metadata content
+* The required contents of the metadata files are defined by the JSON metadata schema. According to that schema, metadata will be produced for each deliverable that includes the following designated categories:
+  * Bibliographic (provided by NYPL)
+  * Source (partially provided by NYPL)
+  * Technical
+  * Digitization process
+  * Digitizer
+
+* Metadata must use the only the fields and values defined in the schema.
+* If there is a question about a field, if the provided vocabulary does not accurately describe an object or process, or if a list of terms is insufficient, contact NYPL for guidance on how to proceed. NYPL may approve and release new terms on the schema depending on priority.
+* Metadata fields must not be empty. Refer to the schema or contact NYPL for allowances of “unknown” as a value.
+
+### Metadata notes fields
+The metadata schema includes a number of ‘notes’ fields which must be used as described below:
+* bibliographic.accessNotes: NYPL added. No additional input required
+* bibliographic.contentNotes: any additional content notes (“title program ends mid-tape, followed by another program”; "contains explicit content")
+* technical.signalNotes: audiovisual signal characteristics noticed during capture ("tracking errors; audio buzz")
+* source.notes.physicalConditionDigitizationNotes: description of pre-existing damage or decay not already noted in PreShip notes (“broken leader”; "bad splices")
+* source.notes.physicalConditionPreShipNotes: NYPL added. No additional input required
+* digitizationProcess.notes.processNotes: rehousing, adding leader, baking, cleaning
+
+### Metadata errors
+If the technical characteristics or format of an object have provided by NYPL are incorrect (i.e. metadata inventory describes the format as “video cassette analog” and it is actually “audio cassette digital” with a format of “Umatic/PCM”), please 
+provide corrected metadata. Make any changes to source object metadata elements that would be appropriate, and note the correction in the "digitization.notes.processNotes". Example text:
+"NYPL-provided metadata incorrectly listed [insert field name here] as [insert wrong content here]; JSON reflects correct [field name]"
+
+### BEXT Metadata
+During audio digitization, the following BEXT metadata must be captured in the original Broadcast Wave files to ensure retention in the final FLAC deliverable. 
+
+| BEXT field | Explanation | Sample data |
+| --- | ---| --- |
+| Description | Description of who created the file | File generated by Vendor Services, US |
+| Originator | Country code, Institution | US, The New York Public Library||
+| OriginatorReference | technicalFileName | myt_123456_v01f01_pm |
+| OriginationDate | Date file created in YYYY-MM-DD format | 2017-06-23 |
+| OriginationTime | Time file created in hh:mm:ss format | 11:20:47 
+| BextVersion | [version number] | 1 |
+| CodingHistory | Signal chain from which the digital file was created, starting with the analog or digital source. There are six elements that can be included in the coding history:1. A = coding algorithm (analog, PCM, etc.); 2. F = sampling frequency in Hz; 3. B = bit rate (for MPEG only); 4. W = word length or bit depth; 5. M = mode or sound field (mono, stereo); 6. T = free text to describe playback and capture equipment | A=PCM,F=44100,W=16,M=stereo,T=TSSTcorp DVDRW SH-216BB; Compact Disc; A=PCM,F=44100,W=16,M=stereo,T=dBpoweramp 14.3; Import CDDA as WAV |
 
 
 <a name="film-media"></a>
