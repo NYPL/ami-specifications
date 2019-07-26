@@ -78,6 +78,9 @@ Package digital assets using the BagIt specification (V0.97) (https://tools.ietf
   * Files
 * For each preservation master file in the PreservationMasters directory, corresponding derivative file/s must exist.
 * Each audio, film, video media, or data file in the Bag must have a corresponding JSON metadata file (image files do not require metadata).
+* Example bag structure:
+
+![AMI-bag-structure](https://github.com/NYPL/ami-specifications/blob/master/AMI-BagStructure_2019.jpg)
 
 
 ### File naming convention
