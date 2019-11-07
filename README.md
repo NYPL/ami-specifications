@@ -172,6 +172,35 @@ For each original recording, the following shall be produced:
 
 Film must be digitized and captured as DPX, then transcoded with any synchronous Broadcast Wave files to FFV1/FLAC/Matroska using RAWcooked (https://mediaarea.net/RAWcooked).
 
+**_Condition Information_**
+NYPL will provide item-level condition information where possible in the following inventory fields. Note - only "condition_splices" has a scale that differs from the generic "minor > severe" scale:
+			
+* condition_splices: 
+  * 0: no splices
+  * 1: 1 - 5 splices
+  * 2: 6 - 10 splices
+  * 3: More than 10 splices
+* condition_perforation_damage
+  * 0: non-existent
+  * 1: minor
+  * 2: moderate
+  * 3: severe
+* condition_distortion
+  * 0: non-existent
+  * 1: minor
+  * 2: moderate
+  * 3: severe
+* condition_fading
+  * 0: non-existent
+  * 1: minor
+  * 2: moderate
+  * 3: severe
+* condition_scratches
+  * 0: non-existent
+  * 1: minor
+  * 2: moderate
+  * 3: severe
+
 <a name="film-groups-1-2"></a>
 ### Film Groups 1 and 2: Motion picture film, silent / sound
 
