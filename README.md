@@ -258,8 +258,8 @@ NYPL will provide item-level condition information where possible in the followi
 | Bit depth | 8 bit | 8 bit | 8 bit |
 | Height** | 486 | 486 | 486 |
 | Width** | 720 | 720  | 720 |
-| Display aspect ratio** | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed |
-| Pixel aspect ratio | 1.2 | 1.2 | 1.2 |
+| Display aspect ratio** | TBD | TBD | TBD |
+| Pixel aspect ratio | TBD | TBD| TBD |
 | Video codec | H264 | H264 | H264 |
 | File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
 | Color space | 4:2:0 | 4:2:0 | 4:2:0 |
