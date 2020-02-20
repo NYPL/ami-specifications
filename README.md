@@ -232,7 +232,7 @@ NYPL will provide item-level condition information where possible in the followi
 | --- | ---| --- | --- |
 | Bit depth | 10 bit | 10 bit | 10 bit |
 | Resolution** | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
-| Display aspect ratio** | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed | 16:9 pillarboxed / letter boxed as needed |
+| Display aspect ratio** | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed |
 | Video codec | ProResHQ | ProResHQ | ProResHQ |
 | File wrapper | Quicktime | Quicktime | Quicktime |
 | Frame size** | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 |
@@ -257,7 +257,7 @@ NYPL will provide item-level condition information where possible in the followi
 | --- | ---| --- | --- |
 | Bit depth | 8 bit | 8 bit | 8 bit |
 | Resolution** | 720 x 480 | 720 x 480 | 720 x 480 |
-| Display aspect ratio** | 4:3 letterboxed as needed | 4:3 letterboxed as needed | 4:3 letterboxed as needed |
+| Display aspect ratio** | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed |
 | Video codec | H264 | H264 | H264 |
 | File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
 | Color space | 4:2:0 | 4:2:0 | 4:2:0 |
