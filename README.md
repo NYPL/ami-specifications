@@ -256,15 +256,15 @@ NYPL will provide item-level condition information where possible in the followi
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
 | Bit depth | 8 bit | 8 bit | 8 bit |
-| Resolution** | 720 x 480 | 720 x 480 | 720 x 480 |
+| Height** | 486 | 486 | 486 |
+| Width** | 720 | 720  | 720 |
 | Display aspect ratio** | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed |
+| Pixel aspect ratio | 1.2 | 1.2 | 1.2 |
 | Video codec | H264 | H264 | H264 |
 | File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
 | Color space | 4:2:0 | 4:2:0 | 4:2:0 |
-| Frame size** | 720 x 486 | 720 x 486 | 720 x 486 |
 | Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
 | Scan type | Progressive | Progressive | Progressive |
-| Pixel aspect ratio | 1.000 | 1.000 | 1.000 |
 | Audio codec* | AAC | AAC | AAC |
 | Audio bit rate* | 320 kbs | 320 kbs | 320 kbs |
 | Audio sampling rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
