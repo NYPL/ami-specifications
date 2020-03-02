@@ -256,21 +256,21 @@ NYPL will provide item-level condition information where possible in the followi
 | Source format | 35mm | 16mm | 8mm / Super 8mm / Double 8mm |
 | --- | ---| --- | --- |
 | Bit depth | 8 bit | 8 bit | 8 bit |
-| Height** | 486 | 486 | 486 |
-| Width** | 720 | 720  | 720 |
-| Display aspect ratio** | 16x9 | 16x9 | 16x9 |
+| Height** | 1080 | 1080 | 1080 |
+| Width** | 1920 | 1920  | 1920 |
+| Display aspect ratio** | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed | 16:9 pilarboxed / letter boxed as needed |
 | Video codec | H264 | H264 | H264 |
 | File wrapper | MPEG-4 (.mp4) | MPEG-4 (.mp4) | MPEG-4 (.mp4) |
 | Color space | 4:2:0 | 4:2:0 | 4:2:0 |
 | Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
 | Scan type | Progressive | Progressive | Progressive |
 | Audio codec* | AAC | AAC | AAC |
-| Audio bit rate* | 320 kbs | 320 kbs | 320 kbs |
+| Audio bit rate* | 256 kbs | 256 kbs | 256 kbs |
 | Audio sampling rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
 | Audio channels* | same as Mezzanine* | same as Mezzanine* | same as Mezzanine* |
 | Image corrections| Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic | Color corrected for dye fading, cropped to picture - no frame-lines or sound track visible, Non-anamorphic |
 
-\* Where audio is applicable.
+\* Where audio is applicable; subject to change depending on audio characteristics.
 ** Subject to change. TBD.
 
 <a name="film-group-3"></a>
