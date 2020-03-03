@@ -264,7 +264,7 @@ NYPL will provide item-level condition information where possible in the followi
 | Color space | 4:2:0 | 4:2:0 | 4:2:0 |
 | Frame rate | (Same as preservation master) | (Same as preservation master)  | (Same as preservation master) |
 | Scan type | Progressive | Progressive | Progressive |
-| Video bit rate | 3.5 Mbit/second | 3.5 Mbit/second | 3.5 Mbit/second |
+| Video bit rate | 8 Mbit/second or higher | 8 Mbit/second or higher | 8 Mbit/second or higher |
 | Audio codec* | AAC | AAC | AAC |
 | Audio bit rate* | 256 kbs | 256 kbs | 256 kbs |
 | Audio sampling rate* | 48,000 Hz | 48,000 Hz | 48,000 Hz |
